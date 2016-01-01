@@ -9,7 +9,7 @@
 
 
 ###Credits：
-编写人员：杨飞龙
+编写人员：felo
 
 ###NEWS：
 无
@@ -24,7 +24,7 @@ GNU.
 
 ###Manifest：
 包含1个文件：
-- homework2.py:主程序，分成三个部分，第一部分读取user.txt文件，第二部分判断登陆情况，第三部分将新的内容重新写入user.txt文件
+- homework2.py:主程序
 
 FAQ：
 无
