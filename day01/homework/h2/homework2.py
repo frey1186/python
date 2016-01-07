@@ -43,13 +43,17 @@ while True:
     #输入选择
     num = input('\n输入你的选择[b:Back,q:Quit]:')
     #如果是数字，则转成int，如果是中文，则记录前面的标记
-    try:
+    if num.isdigit():
         num = int(num)
-    except:
-        try:
-            num = list(menu.keys()).index(num)
-        except:
-            pass
+    elif num in menu:
+        num = list(menu.keys()).index(num)
+    # try:
+    #     num = int(num)
+    # except:
+    #     try:
+    #         num = list(menu.keys()).index(num)
+    #     except:
+    #         pass
     #如果num是数字，且小于menu的长度
     if isinstance(num, int) and num in range(len(menu)):
         #如果menu是list的话，说明已经是字典的最后一层，输出最后选择

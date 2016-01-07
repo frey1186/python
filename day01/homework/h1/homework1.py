@@ -13,13 +13,14 @@ user_locked = []    #临时存放被锁定的用户名
 input_user = []     #临时存放本次运行中输入的所有用户名
 
 ##读取存放用户信息的文件
-file = open('user.txt', 'r')
+file = open(r'user.txt', 'r')
 for line in file.readlines():
-    #将每行中第一个和第二个字段，写入user_password字典中
-    user_password[line.strip().split(':')[0]] = line.strip().split(':')[1]
-    #将每行中第三个字段为1的用户写入user_locked中
-    if int(line.strip().split(':')[2]) == 1:
-        user_locked.append(line.strip().split(':')[0])
+    if not line.startswith('#'):
+        #将每行中第一个和第二个字段，写入user_password字典中
+        user_password[line.strip().split(':')[0]] = line.strip().split(':')[1]
+        #将每行中第三个字段为1的用户写入user_locked中
+        if int(line.strip().split(':')[2]) == 1:
+            user_locked.append(line.strip().split(':')[0])
 file.close()
 
 
@@ -28,17 +29,15 @@ flag = 1
 while flag:
     user = input('请输入用户名：')
     password = input('请输入密码：')
-
+    #如果用户在user_locked中，则显示用户已被锁定，并继续循环
+    if user in user_password and user in user_locked:
+        print('\n用户已经被锁定。\n')
     #如果用户名和密码正确，则显示欢迎词，并推出循环
-    if user in user_password and user_password[user] == password:
+    elif user in user_password and user_password[user] == password:
         print('\n欢迎登陆，%s\n' % user)
         break
     else:
-        #如果用户在user_locked中，则显示用户已被锁定，并继续循环
-        if user in user_password and user in user_locked:
-            print('\n用户已经被锁定。\n')
-        else:
-            print('\n用户名或密码输入错误。\n')
+        print('\n用户名或密码输入错误。\n')
         input_user.append(user)
         #判断用户是否已经错误登陆三次，锁定
         for i in input_user:
@@ -50,8 +49,9 @@ while flag:
 
 
 ##将用户名，密码以及锁定标记重新写入用户信息文件中
-file = open('user.txt', 'w')
+file = open(r'user.txt', 'w')
 #对于原有用户，修改锁定标记后重新写入
+file.write('#user_name:password:is_locked:\n')
 for i in user_password:
     line = i + ':' + user_password[i]
     if i in user_locked:
