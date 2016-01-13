@@ -212,8 +212,12 @@ print(dic)
 
 
 
+name = 'Yang'
+res = name.lower()
+print(res)
 
-
+name = {'name':0, 'age':1}
+print(dir(name))
 
 
 
