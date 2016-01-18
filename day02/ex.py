@@ -162,33 +162,33 @@ __author__ = 'felo'
 # # tu.index()
 
 #
-# #dic = {'k1':'v1','k2':'v2'}
-# dic = dict(k1='v1', k2='v2')
-#
-# new_dic = dic.fromkeys(['k1', 'k2'], 'v1000')
-# print(new_dic)
-#
-# print(dic['k1'])
-# print(dic['k2'])
-# #print(dic['k3'])       #报错
-# print(dic.get('k3'))
-# print(dic.get('k3', 'alex'))        #'k3'不存在的时候使用'alex'
-#
-# dic = dict(k1='v1', k2='v2')
-# dic.pop('k1')           #指定key
-# print(dic)
-#
-# dic = dict(k1='v1', k2='v2')
-# dic.popitem()       #无序的
-# print(dic)
-#
-# dic['k3'] = 123
-# dic.setdefault('k4')        #默认值None
-# print(dic)
-#
-# dic = dict(k1='v1', k2='v2')
-# dic.update({'k3':123})
-# print(dic)
+#dic = {'k1':'v1','k2':'v2'}
+dic = dict(k1='v1', k2='v2')
+
+new_dic = dic.fromkeys(['k1', 'k2'], 'v1000')
+print(new_dic)
+
+print(dic['k1'])
+print(dic['k2'])
+#print(dic['k3'])       #报错
+print(dic.get('k3'))
+print(dic.get('k3', 'alex'))        #'k3'不存在的时候使用'alex'
+
+dic = dict(k1='v1', k2='v2')
+dic.pop('k1')           #指定key
+print(dic)
+
+dic = dict(k1='v1', k2='v2')
+dic.popitem()       #无序的
+print(dic)
+
+dic['k3'] = 123
+dic.setdefault('k4')        #默认值None
+print(dic)
+
+dic = dict(k1='v1', k2='v2')
+dic.update({'k3':123})
+print(dic)
 
 
 li1 = [11, 22, 33, 44, 55, 66, 77, 88, 99, 90, ]
@@ -200,6 +200,7 @@ for i in li1:
             dic['k1'].append(i)
         else:
             dic['k1'] = [i, ]
+            #{‘k1’:[90, 99]}
     else:
         if 'k2' in dic.keys():
             dic['k2'].append(i)
@@ -208,16 +209,16 @@ for i in li1:
 
 print(dic)
 
-
-
-
-
-name = 'Yang'
-res = name.lower()
-print(res)
-
-name = {'name':0, 'age':1}
-print(dir(name))
+#
+#
+#
+#
+# name = 'Yang'
+# res = name.lower()
+# print(res)
+#
+# name = {'name':0, 'age':1}
+# print(dir(name))
 
 
 
