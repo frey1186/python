@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14dbe7b8-e985-4786-9e99-e8fe825f074b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day03/homework/readme.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/day03/homework/h1.py" afterPath="$PROJECT_DIR$/day03/homework/homework.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day03/homework/readme.md" afterPath="$PROJECT_DIR$/day03/homework/readme.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="python.iws" />
@@ -47,21 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homework.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homework.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day03/homework/homework.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5786802">
+            <state vertical-scroll-proportion="0.0">
               <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day03/homework/readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5185184">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.77656674">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -100,8 +99,8 @@
         <option value="$PROJECT_DIR$/day03/homework/homeowrk.py" />
         <option value="$PROJECT_DIR$/day03/homework/ha.txt" />
         <option value="$PROJECT_DIR$/day03/homework/h1.py" />
-        <option value="$PROJECT_DIR$/day03/homework/readme.md" />
         <option value="$PROJECT_DIR$/day03/homework/homework.py" />
+        <option value="$PROJECT_DIR$/day03/homework/readme.md" />
       </list>
     </option>
   </component>
@@ -605,7 +604,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453206743069</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="day03-homwork-修改">
+      <created>1453208734684</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1453208734684</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -686,7 +691,8 @@
     <MESSAGE value="last change for day02 homework" />
     <MESSAGE value="day03" />
     <MESSAGE value="day03-homwork" />
-    <option name="LAST_COMMIT_MESSAGE" value="day03-homwork" />
+    <MESSAGE value="day03-homwork-修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="day03-homwork-修改" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1032,18 +1038,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day03/homework/readme.md">
+    <entry file="file://$PROJECT_DIR$/day03/homework/homework.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5185184">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day03/homework/homework.py">
+    <entry file="file://$PROJECT_DIR$/day03/homework/readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5786802">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.77656674">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding />
         </state>
       </provider>

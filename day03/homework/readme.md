@@ -14,6 +14,7 @@
 v1.0  2016-01-19 21:00:06
 
 ###Manifest：
+https://www.processon.com/diagraming/564954c4e4b0e52415ca48ba
 总共包含2个函数。
 - get_record(backend, config_file)
     得到配置文件的ha记录列表和整个文件列表
