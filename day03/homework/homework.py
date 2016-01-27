@@ -63,7 +63,7 @@ def ha_record():
             except:
                 print('输入错误')
                 continue
-            #add_record_dict = {"backend": "test.oldboy.org","record":{"server": "100.1.7.9","weight": 20,"maxconn": 30}}
+            #add_record_dict = {"backend": "test.oldboy.org","record":{"server": "100.1.7.999”,”weight": 20,"maxconn": 30}}
             #合成record记录字符串
             record_str = '        server %s %s weight %d maxconn %d\n' \
                          % (add_record_dict['record']['server'], add_record_dict['record']['server'],
