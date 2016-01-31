@@ -30,6 +30,13 @@ def w(func):    #装饰器，验证表达式输入格式
     return inner
 
 
+def reload_str(arg1):  #整理表达式
+    arg1 = arg1.replace('++', '+')
+    arg1 = arg1.replace('+-', '-')
+    arg1 = arg1.replace('-+', '-')
+    arg1 = arg1.replace('--', '+')
+    return arg1
+
 
 # num = '\d+.?\d*e?-?\d*.?\d*'
 # yunsuan = {
@@ -41,7 +48,7 @@ def w(func):    #装饰器，验证表达式输入格式
 # print(yunsuan[+])
 
 yunsuan = {
-    '+': "-?\d+\.?\d*\+-?\d+\.?\d*",  #加法，取表达式中第一个加法
+    '+': "\d+\.?\d*\+-?\d+\.?\d*",  #加法，取表达式中第一个加法
     '-': "\d+\.?\d*-\d+\.?\d*",  #减法，取表达式中第一个减法
     '*': "\d+\.?\d*\*-?\d+\.?\d*",  #乘法，取表达式中第一个乘法
     '/': "\d+\.?\d*/-?\d+\.?\d*"  #除法，取表达式中第一个除法
@@ -80,8 +87,7 @@ def compute_without_brackets(arg1):
             elif yunsuanfu.group() == '/':
                 arg1 = compute_one(arg1, '/', my_chu)
         else:  #计算完成乘除后计算加减
-            arg2 = re.sub('\+-', '-', arg1)  #替换+-成-
-            arg1 = re.sub('--', '+', arg2)   #替换--成+
+            arg1 = reload_str(arg1)  #整理表达式
             yunsuanfu = re.search("\d+\.?\d*[\+\-]\d+\.?\d*", arg1)
             if yunsuanfu:  #加减不用按顺序执行，两个函数都执行即可
                 arg1 = compute_one(arg1, '-', my_jian)
@@ -96,15 +102,14 @@ def compute_with_brackets(arg1):
     :param arg1: 表达式
     :return:返回计算结果
     '''
-    arg2 = re.sub('\+-', '-', arg1)  #替换+-成-
-    arg3 = re.sub('--', '+', arg2)  #替换--成+
-    str_in_bracket = re.search("\(([0-9\+\*-/]+)\)", arg3)  #找到表达式中的第一个最里边括号
+    arg1 = reload_str(arg1)  #整理表达式
+    str_in_bracket = re.search("\(([0-9\+\*-/]+)\)", arg1)  #找到表达式中的第一个最里边括号
     if str_in_bracket:
         res1 = compute_without_brackets(str_in_bracket.group(1))  #计算括号里边的值
-        res = re.sub("\([0-9\+\*-/]+\)", res1, arg3, count=1)  #用值替换括号
+        res = re.sub("\([0-9\+\*-/]+\)", res1, arg1, count=1)  #用值替换括号
         return compute_with_brackets(res)  #递归继续执行这个有括号计算函数
     else:
-        return compute_without_brackets(arg3)    #如果沒有括号，递归无括号计算函数
+        return compute_without_brackets(arg1)    #如果沒有括号，递归无括号计算函数
 
 def compute():
     input_str = re.sub(" ", "", input('输入计算式子：'))  #删除计算式子中的空格

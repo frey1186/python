@@ -24,22 +24,76 @@
 #     print(res)
 
 import re
-i = '500-(500*2)'
-i = re.sub('\(500\*2\)','10000',i)
-print(i)
+# i = '500-(500*2)'
+# i = re.sub('\(500\*2\)','10000',i)
+# print(i)
+#
+# a = '9-2*5/3 + 7 /3*99/4*2998 +10 * 568/14'
+# print(eval(a))
+#
+# arg1 = '9-2*5/3 + 7 /3*99/4*2998 +10 * 568/14'
+# yunsuanfu = re.search("\*|/", arg1)
+# yunsuanfu = re.search("\+|-", arg1)
+# print(yunsuanfu.group())
+#
+# a = '2*-2.123'
+# b = a.split('*')
+# print(b)
+# n = [float(x) for x in b]
+# print(n)
+# p = str(n[0] * n[1])
+# print(p)
 
-a = '9-2*5/3 + 7 /3*99/4*2998 +10 * 568/14'
-print(eval(a))
+#
+# arg1 = '1 - 2 * ( (60-30 +(-40/5) * (9-2*5/3 + 7 /3*99/4*2998 +10 * 568/14 )) - (-4*3)/ (16-3*2) )'
+# arg1 = re.sub('\s','',arg1)
+# print(arg1)
+# a = re.search("^[\d\+\*-/()]+$",arg1)
+# print(a)
 
-arg1 = '9-2*5/3 + 7 /3*99/4*2998 +10 * 568/14'
-yunsuanfu = re.search("\*|/", arg1)
-yunsuanfu = re.search("\+|-", arg1)
-print(yunsuanfu.group())
+#
+# import time
+# def consumer(name):
+#     print("%s 准备吃包子啦!" %name)
+#     while True:
+#         baozi = yield
+#         print("包子[%s]来了,被[%s]吃了!" %(baozi,name))
+#
+# def producer(name):
+#     c = consumer('A')
+#     c2 = consumer('B')
+#     c.__next__()
+#     c2.__next__()
+#     print("老子开始准备做包子啦!")
+#     for i in range(10):
+#         time.sleep(1)
+#         print("做了2个包子!")
+#         c.send(i)
+#         c2.send(i)
+#
+# producer("alex")
 
-a = '2*-2.123'
-b = a.split('*')
-print(b)
-n = [float(x) for x in b]
-print(n)
-p = str(n[0] * n[1])
-print(p)
+#
+# def w1(func):
+#     def inner():
+#         # 验证1
+#         # 验证2
+#         # 验证3
+#         return func()
+#     return inner
+#
+# @w1
+# def f1():
+#     print('f1')
+#
+# f1()
+
+
+
+import calc
+
+a = calc.my_jia(1,2)
+print(a)
+
+
+
