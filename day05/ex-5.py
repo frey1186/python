@@ -194,26 +194,54 @@ data = [10,4,33,21,54,3,8,11,5,22,2,1,17,13,6]
 # f.close()
 # print(res)
 
+#
+# import pickle
+# f = open("data.txt",'wb')  #注意使用二进制来读写
+# dic1 = {
+#     "name": "alex",
+#     "age": 12,
+#     "job": "ITer"
+# }
+#
+# # res = pickle.dumps(dic1)
+# # f.write(res)
+# # 等价于
+# pickle.dump(dic1, f)
+#
+# f.close()
+#
+# import pickle
+# f = open("data.txt",'rb')  #使用二进制写入或读取
+# #res = pickle.loads(f.read())
+# # 等价于
+# res = pickle.load(f)
+# f.close()
+# print(res)
 
-import pickle
-f = open("data.txt",'wb')  #注意使用二进制来读写
-dic1 = {
-    "name": "alex",
-    "age": 12,
-    "job": "ITer"
-}
+# def w1(func):
+#     def inner():
+#         print("验证1")
+#         # 验证2
+#         # 验证3
+#         return func()
+#     return inner
+#
+# @w1
+# def f1():
+#     print('f1')
+#
+# f1()
 
-# res = pickle.dumps(dic1)
-# f.write(res)
-# 等价于
-pickle.dump(dic1, f)
+p = [ ]
+q = [ ]
+a = [['ipad', 2998, 1], ['ipad', 2998, 2], ['ipad', 2998, 2], ['ipad', 2998, 2]]
+for i in a:
+    p.append(i[0])
+    q.append(i[2])
+for j in p:
+    if p.count(j) >1:
+        pass
 
-f.close()
 
-import pickle
-f = open("data.txt",'rb')  #使用二进制写入或读取
-#res = pickle.loads(f.read())
-# 等价于
-res = pickle.load(f)
-f.close()
-print(res)
+a = [1,1,1,1]
+print(a.index(1))
