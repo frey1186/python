@@ -73,20 +73,20 @@ import re
 #
 # producer("alex")
 
+# #
+# def w1(func):
+#     def inner():
+#         print("验证1")
+#         # 验证2
+#         # 验证3
+#         return func()
+#     return inner
 #
-def w1(func):
-    def inner():
-        print("验证1")
-        # 验证2
-        # 验证3
-        return func()
-    return inner
-
-@w1
-def f1():
-    print('f1')
-
-f1()
+# @w1
+# def f1():
+#     print('f1')
+#
+# f1()
 
 #
 #
@@ -132,3 +132,41 @@ f1()
 # kargs = "kargs"
 #
 # Index(request, kargs)
+
+
+
+def triangles():
+    a = []
+    n =[1]
+    yield n
+    n = [1,1]
+    yield n
+    while True:
+        for i in range(1,len(n)):
+            a.append(1)
+            m = n[i-1] + n[i]
+            a.append(m)
+        a.append(1)
+        yield a
+
+
+
+# 期待输出:
+# [1]
+# [1, 1]
+# [1, 2, 1]
+# [1, 3, 3, 1]
+# [1, 4, 6, 4, 1]
+# [1, 5, 10, 10, 5, 1]
+# [1, 6, 15, 20, 15, 6, 1]
+# [1, 7, 21, 35, 35, 21, 7, 1]
+# [1, 8, 28, 56, 70, 56, 28, 8, 1]
+# [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]
+
+
+n = 0
+for t in triangles():
+    print(t)
+    n = n + 1
+    if n == 10:
+        break

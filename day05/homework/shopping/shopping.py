@@ -1,5 +1,5 @@
-import  json
-product_list_file = "shopping/product_list.txt"
+product_dict_file = "shopping/product_dict.txt"
+from user import file_manage
 
 
 def get_product():
@@ -48,39 +48,27 @@ def get_product():
 
 
 
-def shopping():
+def shopping(user, product_dict = {}):
+    """
+
+    :param user: 用户
+    :param product_dict: 已购产品清单
+    :return: 返回写入购物字典文件
+    """
     try:
-        fr = open(product_list_file, "r")
-        product_list = json.load(fr)
-        fr.close()
+
+        product_dict = file_manage.file_read(product_dict_file)
+        if not product_dict.get(user):
+            product_dict[user] = [get_product(),]
     except:
-        product_list = [get_product()]
+        product_dict[user] = [get_product(),]
+
     while True:
         input_str = input("是否继续购物？（Y/N?）")
         if input_str.strip().lower() == "y":
-            product_list.append(get_product())
+            product_dict[user].append(get_product())
         elif input_str.strip().lower() == "n":
 
-            fw = open(product_list_file, "w")
-            json.dump(product_list, fw)
-            fw.close()
-            #return product_list
+            file_manage.file_write(product_dict, product_dict_file)
             break
 
-    #合并重复项
-    for product in product_list:
-        pass
-
-
-
-
-
-
-
-
-
-# shopping(product_list_file)
-# fr = open(product_list_file, "r")
-# a = json.load(fr)
-# fr.close()
-# print(a)
