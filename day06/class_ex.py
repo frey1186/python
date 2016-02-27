@@ -9,6 +9,8 @@ class Cat(Animal):
         return 'Meow!'
 
 class Dog(Animal):
+
+    @staticmethod
     def talk(self):
         return 'Woof! Woof!'
 
