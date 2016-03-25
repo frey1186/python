@@ -1,0 +1,277 @@
+Fri, 11 Mar 2016 00:11:09 DEBUG starting thread (client mode): 0x2ac57470
+Fri, 11 Mar 2016 00:11:09 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 11 Mar 2016 00:11:09 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 11 Mar 2016 00:11:09 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 11 Mar 2016 00:11:09 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 11 Mar 2016 00:11:09 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 11 Mar 2016 00:11:09 DEBUG Cipher agreed: aes128-ctr
+Fri, 11 Mar 2016 00:11:09 DEBUG MAC agreed: hmac-sha2-256
+Fri, 11 Mar 2016 00:11:09 DEBUG Compression agreed: none
+Fri, 11 Mar 2016 00:11:09 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 11 Mar 2016 00:11:09 DEBUG Switch to new keys ...
+Fri, 11 Mar 2016 00:11:09 DEBUG Adding ssh-rsa host key for 192.168.19.105: b'bf796308d5dadadce01ff0af34c3d79b'
+Fri, 11 Mar 2016 00:11:09 DEBUG userauth is OK
+Fri, 11 Mar 2016 00:11:19 INFO Authentication (password) successful!
+Fri, 11 Mar 2016 00:11:20 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 11 Mar 2016 00:11:20 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 11 Mar 2016 00:11:20 DEBUG Secsh channel 0 opened.
+Fri, 11 Mar 2016 00:11:20 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 11 Mar 2016 00:11:20 DEBUG [chan 0] EOF received (0)
+Fri, 11 Mar 2016 00:11:20 DEBUG [chan 0] EOF sent (0)
+Fri, 11 Mar 2016 00:11:20 INFO [192.168.19.105] 'pwd' 执行成功
+Fri, 11 Mar 2016 00:11:20 DEBUG EOF in transport thread
+Fri, 11 Mar 2016 00:54:38 DEBUG starting thread (client mode): 0x1ded0ef0
+Fri, 11 Mar 2016 00:54:38 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 11 Mar 2016 00:54:38 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 11 Mar 2016 00:54:38 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 11 Mar 2016 00:54:38 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 11 Mar 2016 00:54:38 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 11 Mar 2016 00:54:38 DEBUG Cipher agreed: aes128-ctr
+Fri, 11 Mar 2016 00:54:38 DEBUG MAC agreed: hmac-sha2-256
+Fri, 11 Mar 2016 00:54:38 DEBUG Compression agreed: none
+Fri, 11 Mar 2016 00:54:38 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 11 Mar 2016 00:54:38 DEBUG Switch to new keys ...
+Fri, 11 Mar 2016 00:54:38 DEBUG Adding ssh-rsa host key for 192.168.19.105: b'bf796308d5dadadce01ff0af34c3d79b'
+Fri, 11 Mar 2016 00:54:38 DEBUG userauth is OK
+Fri, 11 Mar 2016 00:54:40 INFO Authentication (password) successful!
+Fri, 11 Mar 2016 00:54:40 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 11 Mar 2016 00:54:40 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 11 Mar 2016 00:54:40 DEBUG Secsh channel 0 opened.
+Fri, 11 Mar 2016 00:54:40 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 11 Mar 2016 00:54:40 DEBUG [chan 0] EOF received (0)
+Fri, 11 Mar 2016 00:54:40 DEBUG [chan 0] EOF sent (0)
+Fri, 11 Mar 2016 00:54:40 INFO [192.168.19.105] 'ls -l /' 执行成功
+Fri, 11 Mar 2016 00:54:40 DEBUG EOF in transport thread
+Fri, 11 Mar 2016 00:54:40 DEBUG starting thread (client mode): 0x1ded0eb8
+Fri, 11 Mar 2016 00:54:40 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 11 Mar 2016 00:54:40 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 11 Mar 2016 00:54:40 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 11 Mar 2016 00:54:40 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 11 Mar 2016 00:54:40 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 11 Mar 2016 00:54:40 DEBUG Cipher agreed: aes128-ctr
+Fri, 11 Mar 2016 00:54:40 DEBUG MAC agreed: hmac-sha2-256
+Fri, 11 Mar 2016 00:54:40 DEBUG Compression agreed: none
+Fri, 11 Mar 2016 00:54:40 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 11 Mar 2016 00:54:40 DEBUG Switch to new keys ...
+Fri, 11 Mar 2016 00:54:40 DEBUG Adding ssh-rsa host key for 192.168.19.104: b'd4f710164a76e78a0d9b6f80f9fe1374'
+Fri, 11 Mar 2016 00:54:40 DEBUG userauth is OK
+Fri, 11 Mar 2016 00:54:46 INFO Authentication (password) successful!
+Fri, 11 Mar 2016 00:54:46 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 11 Mar 2016 00:54:52 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 11 Mar 2016 00:54:52 DEBUG Secsh channel 0 opened.
+Fri, 11 Mar 2016 00:54:56 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 11 Mar 2016 00:54:56 DEBUG [chan 0] EOF received (0)
+Fri, 11 Mar 2016 00:54:56 DEBUG [chan 0] EOF sent (0)
+Fri, 11 Mar 2016 00:54:56 INFO [192.168.19.104] 'ls -l /' 执行成功
+Fri, 11 Mar 2016 00:54:56 DEBUG Dropping user packet because connection is dead.
+Fri, 11 Mar 2016 00:56:22 DEBUG starting thread (client mode): 0x738cc748
+Fri, 11 Mar 2016 00:56:22 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 11 Mar 2016 00:56:22 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 11 Mar 2016 00:56:22 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 11 Mar 2016 00:56:22 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 11 Mar 2016 00:56:22 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 11 Mar 2016 00:56:22 DEBUG Cipher agreed: aes128-ctr
+Fri, 11 Mar 2016 00:56:22 DEBUG MAC agreed: hmac-sha2-256
+Fri, 11 Mar 2016 00:56:22 DEBUG Compression agreed: none
+Fri, 11 Mar 2016 00:56:22 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 11 Mar 2016 00:56:22 DEBUG Switch to new keys ...
+Fri, 11 Mar 2016 00:56:22 DEBUG Attempting password auth...
+Fri, 11 Mar 2016 00:56:22 DEBUG userauth is OK
+Fri, 11 Mar 2016 00:56:28 INFO Authentication (password) successful!
+Fri, 11 Mar 2016 00:56:28 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 11 Mar 2016 00:56:34 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 11 Mar 2016 00:56:34 DEBUG Secsh channel 0 opened.
+Fri, 11 Mar 2016 00:56:38 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 11 Mar 2016 00:56:38 INFO [chan 0] Opened sftp connection (server version 3)
+Fri, 11 Mar 2016 00:56:38 ERROR [Errno 21] Is a directory: '/tmp'
+Fri, 11 Mar 2016 00:56:38 DEBUG EOF in transport thread
+Fri, 11 Mar 2016 00:57:04 DEBUG starting thread (client mode): 0x738ccf28
+Fri, 11 Mar 2016 00:57:04 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 11 Mar 2016 00:57:04 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 11 Mar 2016 00:57:04 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 11 Mar 2016 00:57:04 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 11 Mar 2016 00:57:04 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 11 Mar 2016 00:57:04 DEBUG Cipher agreed: aes128-ctr
+Fri, 11 Mar 2016 00:57:04 DEBUG MAC agreed: hmac-sha2-256
+Fri, 11 Mar 2016 00:57:04 DEBUG Compression agreed: none
+Fri, 11 Mar 2016 00:57:04 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 11 Mar 2016 00:57:04 DEBUG Switch to new keys ...
+Fri, 11 Mar 2016 00:57:04 DEBUG Attempting password auth...
+Fri, 11 Mar 2016 00:57:04 DEBUG userauth is OK
+Fri, 11 Mar 2016 00:57:10 INFO Authentication (password) successful!
+Fri, 11 Mar 2016 00:57:10 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 11 Mar 2016 00:57:16 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 11 Mar 2016 00:57:16 DEBUG Secsh channel 0 opened.
+Fri, 11 Mar 2016 00:57:20 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 11 Mar 2016 00:57:20 INFO [chan 0] Opened sftp connection (server version 3)
+Fri, 11 Mar 2016 00:57:20 DEBUG [chan 0] stat(b'/tmp/1.f')
+Fri, 11 Mar 2016 00:57:20 DEBUG [chan 0] open(b'/tmp/1.f', 'rb')
+Fri, 11 Mar 2016 00:57:20 DEBUG [chan 0] open(b'/tmp/1.f', 'rb') -> b'00000000'
+Fri, 11 Mar 2016 00:57:20 DEBUG [chan 0] close(b'00000000')
+Fri, 11 Mar 2016 00:57:20 INFO [192.168.19.104]get /tmp/1.f 成功。
+Fri, 11 Mar 2016 00:57:20 DEBUG EOF in transport thread
+Fri, 18 Mar 2016 00:50:04 DEBUG starting thread (client mode): 0xb14fccf8
+Fri, 18 Mar 2016 00:50:04 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 18 Mar 2016 00:50:04 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 18 Mar 2016 00:50:04 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 18 Mar 2016 00:50:04 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 18 Mar 2016 00:50:04 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 18 Mar 2016 00:50:04 DEBUG Cipher agreed: aes128-ctr
+Fri, 18 Mar 2016 00:50:04 DEBUG MAC agreed: hmac-sha2-256
+Fri, 18 Mar 2016 00:50:04 DEBUG Compression agreed: none
+Fri, 18 Mar 2016 00:50:04 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 18 Mar 2016 00:50:04 DEBUG Switch to new keys ...
+Fri, 18 Mar 2016 00:50:04 DEBUG Adding ssh-rsa host key for 192.168.19.104: b'd4f710164a76e78a0d9b6f80f9fe1374'
+Fri, 18 Mar 2016 00:50:04 DEBUG Trying discovered key b'2322ba3afe3594c8eb1482d00a59cc92' in /root/.ssh/id_rsa
+Fri, 18 Mar 2016 00:50:04 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:50:04 INFO Authentication (publickey) failed.
+Fri, 18 Mar 2016 00:50:04 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:50:04 INFO Authentication (password) successful!
+Fri, 18 Mar 2016 00:50:04 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 18 Mar 2016 00:50:04 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 18 Mar 2016 00:50:04 DEBUG Secsh channel 0 opened.
+Fri, 18 Mar 2016 00:50:04 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 18 Mar 2016 00:50:04 DEBUG [chan 0] EOF received (0)
+Fri, 18 Mar 2016 00:50:04 INFO [192.168.19.104] 'df -h > /tmp/$USER.log' 执行成功
+Fri, 18 Mar 2016 00:50:04 DEBUG [chan 0] EOF sent (0)
+Fri, 18 Mar 2016 00:50:04 DEBUG Dropping user packet because connection is dead.
+Fri, 18 Mar 2016 00:50:04 DEBUG Dropping user packet because connection is dead.
+Fri, 18 Mar 2016 00:51:33 DEBUG starting thread (client mode): 0x34eb3d30
+Fri, 18 Mar 2016 00:51:33 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 18 Mar 2016 00:51:33 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 18 Mar 2016 00:51:33 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 18 Mar 2016 00:51:33 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 18 Mar 2016 00:51:33 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 18 Mar 2016 00:51:33 DEBUG Cipher agreed: aes128-ctr
+Fri, 18 Mar 2016 00:51:33 DEBUG MAC agreed: hmac-sha2-256
+Fri, 18 Mar 2016 00:51:33 DEBUG Compression agreed: none
+Fri, 18 Mar 2016 00:51:33 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 18 Mar 2016 00:51:33 DEBUG Switch to new keys ...
+Fri, 18 Mar 2016 00:51:33 DEBUG Adding ssh-rsa host key for 192.168.19.104: b'd4f710164a76e78a0d9b6f80f9fe1374'
+Fri, 18 Mar 2016 00:51:33 DEBUG Trying discovered key b'2322ba3afe3594c8eb1482d00a59cc92' in /root/.ssh/id_rsa
+Fri, 18 Mar 2016 00:51:33 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:51:33 INFO Authentication (publickey) failed.
+Fri, 18 Mar 2016 00:51:33 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:51:33 INFO Authentication (password) successful!
+Fri, 18 Mar 2016 00:51:33 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 18 Mar 2016 00:51:33 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 18 Mar 2016 00:51:33 DEBUG Secsh channel 0 opened.
+Fri, 18 Mar 2016 00:51:33 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 18 Mar 2016 00:51:33 DEBUG [chan 0] EOF received (0)
+Fri, 18 Mar 2016 00:51:33 INFO [192.168.19.104] 'df -h > /tmp/$USER.log' 执行成功
+Fri, 18 Mar 2016 00:51:33 DEBUG EOF in transport thread
+Fri, 18 Mar 2016 00:51:40 DEBUG starting thread (client mode): 0x3481d470
+Fri, 18 Mar 2016 00:51:40 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 18 Mar 2016 00:51:40 DEBUG starting thread (client mode): 0x3481d860
+Fri, 18 Mar 2016 00:51:40 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 18 Mar 2016 00:51:40 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 18 Mar 2016 00:51:40 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 18 Mar 2016 00:51:40 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 18 Mar 2016 00:51:40 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 18 Mar 2016 00:51:40 DEBUG Cipher agreed: aes128-ctr
+Fri, 18 Mar 2016 00:51:40 DEBUG MAC agreed: hmac-sha2-256
+Fri, 18 Mar 2016 00:51:40 DEBUG Compression agreed: none
+Fri, 18 Mar 2016 00:51:40 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 18 Mar 2016 00:51:40 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 18 Mar 2016 00:51:40 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 18 Mar 2016 00:51:40 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 18 Mar 2016 00:51:40 DEBUG Cipher agreed: aes128-ctr
+Fri, 18 Mar 2016 00:51:40 DEBUG MAC agreed: hmac-sha2-256
+Fri, 18 Mar 2016 00:51:40 DEBUG Compression agreed: none
+Fri, 18 Mar 2016 00:51:40 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 18 Mar 2016 00:51:40 DEBUG Switch to new keys ...
+Fri, 18 Mar 2016 00:51:40 DEBUG Adding ssh-rsa host key for 192.168.19.104: b'd4f710164a76e78a0d9b6f80f9fe1374'
+Fri, 18 Mar 2016 00:51:40 DEBUG Trying discovered key b'2322ba3afe3594c8eb1482d00a59cc92' in /root/.ssh/id_rsa
+Fri, 18 Mar 2016 00:51:40 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 18 Mar 2016 00:51:40 DEBUG Switch to new keys ...
+Fri, 18 Mar 2016 00:51:40 DEBUG Adding ssh-rsa host key for 192.168.19.104: b'd4f710164a76e78a0d9b6f80f9fe1374'
+Fri, 18 Mar 2016 00:51:40 DEBUG Trying discovered key b'2322ba3afe3594c8eb1482d00a59cc92' in /root/.ssh/id_rsa
+Fri, 18 Mar 2016 00:51:40 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:51:40 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:51:40 INFO Authentication (publickey) failed.
+Fri, 18 Mar 2016 00:51:40 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:51:40 INFO Authentication (publickey) failed.
+Fri, 18 Mar 2016 00:51:40 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:51:40 INFO Authentication (password) successful!
+Fri, 18 Mar 2016 00:51:40 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 18 Mar 2016 00:51:40 INFO Authentication (password) successful!
+Fri, 18 Mar 2016 00:51:40 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 18 Mar 2016 00:51:40 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 18 Mar 2016 00:51:40 DEBUG Secsh channel 0 opened.
+Fri, 18 Mar 2016 00:51:40 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 18 Mar 2016 00:51:40 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 18 Mar 2016 00:51:40 DEBUG Secsh channel 0 opened.
+Fri, 18 Mar 2016 00:51:40 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 18 Mar 2016 00:51:40 DEBUG [chan 0] EOF received (0)
+Fri, 18 Mar 2016 00:51:40 INFO [192.168.19.104] 'df -h > /tmp/$USER.log' 执行成功
+Fri, 18 Mar 2016 00:51:40 DEBUG [chan 0] EOF received (0)
+Fri, 18 Mar 2016 00:51:40 DEBUG [chan 0] EOF sent (0)
+Fri, 18 Mar 2016 00:51:40 INFO [192.168.19.104] 'df -h > /tmp/$USER.log' 执行成功
+Fri, 18 Mar 2016 00:51:40 DEBUG EOF in transport thread
+Fri, 18 Mar 2016 00:51:41 DEBUG EOF in transport thread
+Fri, 18 Mar 2016 00:53:01 DEBUG starting thread (client mode): 0x32ac0c50
+Fri, 18 Mar 2016 00:53:01 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 18 Mar 2016 00:53:01 DEBUG starting thread (client mode): 0x32ac50f0
+Fri, 18 Mar 2016 00:53:01 DEBUG Local version/idstring: SSH-2.0-paramiko_1.16.0
+Fri, 18 Mar 2016 00:53:01 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 18 Mar 2016 00:53:01 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 18 Mar 2016 00:53:01 DEBUG Remote version/idstring: SSH-2.0-OpenSSH_6.6.1
+Fri, 18 Mar 2016 00:53:01 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 18 Mar 2016 00:53:01 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 18 Mar 2016 00:53:01 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 18 Mar 2016 00:53:01 DEBUG Cipher agreed: aes128-ctr
+Fri, 18 Mar 2016 00:53:01 DEBUG MAC agreed: hmac-sha2-256
+Fri, 18 Mar 2016 00:53:01 DEBUG Compression agreed: none
+Fri, 18 Mar 2016 00:53:01 DEBUG kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1', 'diffie-hellman-group1-sha1'] server key:['ssh-rsa', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] server encrypt:['aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'arcfour256', 'arcfour128', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com', 'chacha20-poly1305@openssh.com', 'aes128-cbc', '3des-cbc', 'blowfish-cbc', 'cast128-cbc', 'aes192-cbc', 'aes256-cbc', 'arcfour', 'rijndael-cbc@lysator.liu.se'] client mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] server mac:['hmac-md5-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-ripemd160-etm@openssh.com', 'hmac-sha1-96-etm@openssh.com', 'hmac-md5-96-etm@openssh.com', 'hmac-md5', 'hmac-sha1', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-ripemd160', 'hmac-ripemd160@openssh.com', 'hmac-sha1-96', 'hmac-md5-96'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+Fri, 18 Mar 2016 00:53:01 DEBUG Kex agreed: diffie-hellman-group1-sha1
+Fri, 18 Mar 2016 00:53:01 DEBUG Cipher agreed: aes128-ctr
+Fri, 18 Mar 2016 00:53:01 DEBUG MAC agreed: hmac-sha2-256
+Fri, 18 Mar 2016 00:53:01 DEBUG Compression agreed: none
+Fri, 18 Mar 2016 00:53:01 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 18 Mar 2016 00:53:01 DEBUG Switch to new keys ...
+Fri, 18 Mar 2016 00:53:01 DEBUG Adding ssh-rsa host key for 192.168.19.104: b'd4f710164a76e78a0d9b6f80f9fe1374'
+Fri, 18 Mar 2016 00:53:01 DEBUG Trying discovered key b'2322ba3afe3594c8eb1482d00a59cc92' in /root/.ssh/id_rsa
+Fri, 18 Mar 2016 00:53:01 DEBUG kex engine KexGroup1 specified hash_algo <built-in function openssl_sha1>
+Fri, 18 Mar 2016 00:53:01 DEBUG Switch to new keys ...
+Fri, 18 Mar 2016 00:53:01 DEBUG Adding ssh-rsa host key for 192.168.19.104: b'd4f710164a76e78a0d9b6f80f9fe1374'
+Fri, 18 Mar 2016 00:53:01 DEBUG Trying discovered key b'2322ba3afe3594c8eb1482d00a59cc92' in /root/.ssh/id_rsa
+Fri, 18 Mar 2016 00:53:01 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:53:01 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:53:01 INFO Authentication (publickey) failed.
+Fri, 18 Mar 2016 00:53:01 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:53:01 INFO Authentication (publickey) failed.
+Fri, 18 Mar 2016 00:53:01 DEBUG userauth is OK
+Fri, 18 Mar 2016 00:53:01 INFO Authentication (password) successful!
+Fri, 18 Mar 2016 00:53:01 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 18 Mar 2016 00:53:01 INFO Authentication (password) successful!
+Fri, 18 Mar 2016 00:53:01 DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 18 Mar 2016 00:53:01 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 18 Mar 2016 00:53:01 DEBUG Secsh channel 0 opened.
+Fri, 18 Mar 2016 00:53:01 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 18 Mar 2016 00:53:01 DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 18 Mar 2016 00:53:01 DEBUG Secsh channel 0 opened.
+Fri, 18 Mar 2016 00:53:01 DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 18 Mar 2016 00:53:01 DEBUG [chan 0] EOF received (0)
+Fri, 18 Mar 2016 00:53:01 DEBUG [chan 0] EOF sent (0)
+Fri, 18 Mar 2016 00:53:01 INFO [192.168.19.104] 'ls -al /' 执行成功
+Fri, 18 Mar 2016 00:53:01 DEBUG [chan 0] EOF received (0)
+Fri, 18 Mar 2016 00:53:01 DEBUG [chan 0] EOF sent (0)
+Fri, 18 Mar 2016 00:53:01 INFO [192.168.19.104] 'ls -al /' 执行成功
+Fri, 18 Mar 2016 00:53:01 DEBUG Dropping user packet because connection is dead.
+Fri, 18 Mar 2016 00:53:01 DEBUG EOF in transport thread
+Fri, 18 Mar 2016 00:53:49 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 18 Mar 2016 00:53:49 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 18 Mar 2016 00:53:49 INFO Authentication (publickey) failed.
+Fri, 18 Mar 2016 00:53:49 INFO Authentication (publickey) failed.
+Fri, 18 Mar 2016 00:53:49 INFO Authentication (password) successful!
+Fri, 18 Mar 2016 00:53:49 INFO Authentication (password) successful!
+Fri, 18 Mar 2016 00:53:49 INFO [192.168.19.104] 'ls -al /' 执行成功
+Fri, 18 Mar 2016 00:53:49 INFO [192.168.19.104] 'ls -al /' 执行成功
+Fri, 18 Mar 2016 00:54:47 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 18 Mar 2016 00:54:47 INFO Connected (version 2.0, client OpenSSH_6.6.1)
+Fri, 18 Mar 2016 00:54:48 INFO Authentication (publickey) failed.
+Fri, 18 Mar 2016 00:54:48 INFO Authentication (publickey) failed.
+Fri, 18 Mar 2016 00:54:48 INFO Authentication (password) successful!
+Fri, 18 Mar 2016 00:54:48 INFO Authentication (password) successful!
+Fri, 18 Mar 2016 00:54:48 INFO [192.168.19.104] 'ls -al /' 执行成功
+Fri, 18 Mar 2016 00:54:48 INFO [192.168.19.104] 'ls -al /' 执行成功

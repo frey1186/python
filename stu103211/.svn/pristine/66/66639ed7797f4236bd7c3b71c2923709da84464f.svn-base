@@ -1,0 +1,9 @@
+[centos01]
+hostname = 192.168.19.104
+username = yangfl
+password = yangfeiffei
+[centos02]
+hostname = 192.168.19.104
+username = root
+password = root
+

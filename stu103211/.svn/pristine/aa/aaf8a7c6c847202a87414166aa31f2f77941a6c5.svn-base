@@ -1,0 +1,10 @@
+import re
+def cmd_line_handle(cmd_line):
+    g = re.search('(salt) "(.*)" (.*) "(.*)"',cmd_line)
+    g_list = []
+    return g.groups()
+
+
+cmd = 'salt "*" cmd.run "la -la"'
+print(cmd)
+print(cmd_line_handle(cmd))

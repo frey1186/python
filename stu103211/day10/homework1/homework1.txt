@@ -1,0 +1,333 @@
+（1）examples-1
+
+EchoServer:
+1.
+2.
+3.
+4.from twisted.internet import protocol  #导入协议类
+5.
+6.from twisted.internet import reactor   #导入牛逼的全局循环reactor
+7.
+8.class Echo(protocol.Protocol):    #定义一个继承自protocol的类
+9.
+10.    def dataReceived(self, data):  #重构dataReceived方法
+11.
+12.        self.transport.write(data)  #这里表示将受到的data再原封不动的发送回去。
+13.
+14.def main():
+15.
+16.    factory = protocol.ServerFactory()  #通过协议类创建server工厂类的一个实例
+17.
+18.    factory.protocol = Echo   #
+19.
+20.    reactor.listenTCP(1234,factory)   #监听TCP端口，并将自定义的工厂实例作为参数导入事件中。。。
+21.
+22.    reactor.run()    #开始事件循环，如果没有reactor.stop()，事件将一直循环
+23.
+24.if __name__ == '__main__':
+25.
+26.    main()
+
+
+EchoClient：
+1.
+2.from twisted.internet import reactor, protocol  #和server端一样导入牛逼的reactor和protocol
+3.
+4.# a client protocol
+5.
+6.class EchoClient(protocol.Protocol):
+7.
+8.    """Once connected, send a message, then print the result."""
+9.
+10.    def connectionMade(self):    #重构此方法，用于向服务器发送消息hello alex
+11.
+12.        self.transport.write("hello alex!")
+13.
+14.    def dataReceived(self, data):    #重构，接受服务器发过来的消息，
+15.
+16.        "As soon as any data is received, write it back."
+17.
+18.        print "Server said:", data
+19.
+20.        self.transport.loseConnection()  #并断开连接，之后调用本类中connectionLost以及EchoFactory类中的clientConnectionLost两个方法。
+21.
+22.    def connectionLost(self, reason):    #可能表示服务器断开连接，不确定
+23.
+24.        print "connection lost"
+25.
+26.class EchoFactory(protocol.ClientFactory):   #继承clientFactory工厂类，重写其中的部分方法
+27.
+28.    protocol = EchoClient  #将类中的protocol参数进行赋值，这里是继承Protocol的一个类
+29.
+30.    def clientConnectionFailed(self, connector, reason):  #重构clientConn..这个类，
+31.
+32.        print "Connection failed - goodbye!"  #连接错误，就打印退出，在主机名或端口号不对的情况下会出现这个情况
+33.
+34.        reactor.stop()
+35.
+36.    def clientConnectionLost(self, connector, reason):  #重构clentConn...这个类
+37.
+38.        print "Connection lost - goodbye!"   #断开连接的时候会出现，
+39.
+40.        reactor.stop()
+41.
+42.# this connects the protocol to a server running on port 8000
+43.
+44.def main():
+45.
+46.    f = EchoFactory()  #实例化自定义的继承clientFactory类，
+47.
+48.    reactor.connectTCP("localhost", 1234, f)  #连接服务器
+49.
+50.    reactor.run()  #开始运行事件
+51.
+52.# this only runs if the module was *not* imported
+53.
+54.if __name__ == '__main__':
+55.
+56.    main()
+
+
+（2）example2
+
+server：
+1.
+2.#_*_coding:utf-8_*_
+3.# 目标向客户端发送文件，能够实现并发
+4.
+5.import optparse, os  #optparse模块用来处理参数输入
+6.
+7.from twisted.internet.protocol import ServerFactory, Protocol
+8.#导入两个主要模块serverFactory和protocol
+9.
+10.
+11.def parse_args():  #处理参数
+12.    usage = """usage: %prog [options] poetry-file
+13.
+14.This is the Fast Poetry Server, Twisted edition.
+15.Run it like this:
+16.
+17.  python fastpoetry.py <path-to-poetry-file>
+18.
+19.If you are in the base directory of the twisted-intro package,
+20.you could run it like this:
+21.
+22.  python twisted-server-1/fastpoetry.py poetry/ecstasy.txt
+23.
+24.to serve up John Donne's Ecstasy, which I know you want to do.
+25."""
+26.
+27.    parser = optparse.OptionParser(usage)  #打印usage
+28.
+29.
+30.    #增加一个端口的可选参数，可以不加
+31.    help = "The port to listen on. Default to a random available port."
+32.    parser.add_option('--port', type='int', help=help)
+33.
+34.    #增加一个接口的可选参数，表示主机名，默认localhost
+35.    help = "The interface to listen on. Default is localhost."
+36.    parser.add_option('--iface', help=help, default='localhost')
+37.
+38.    #处理执行命令的参数，就是跟在文件名后面的参数
+39.    options, args = parser.parse_args()
+40.    print("--arg:",options,args)
+41.
+42.    #如果沒有输入参数，输出错误
+43.    if len(args) != 1:
+44.        parser.error('Provide exactly one poetry file.')
+45.
+46.    #要传输的文件  赋值
+47.    poetry_file = args[0]
+48.
+49.    #检查这个文件是否存在
+50.    if not os.path.exists(args[0]):
+51.        parser.error('No such file: %s' % poetry_file)
+52.
+53.    #返回可选参数和文件名称
+54.    return options, poetry_file
+55.
+56.#定义一个Protocol的子类。
+57.class PoetryProtocol(Protocol):
+58.
+59.    #重构connectionMade方法：
+60.    def connectionMade(self):
+61.        #发送信息
+62.        self.transport.write(self.factory.poem)
+63.        #关闭连接
+64.        self.transport.loseConnection()
+65.
+66.#自定义serverFactory子类
+67.class PoetryFactory(ServerFactory):
+68.
+69.    #将自定义的Protocol的子类传给prototol
+70.    protocol = PoetryProtocol
+71.
+72.    #传入一个poem参数
+73.    def __init__(self, poem):
+74.        self.poem = poem
+75.
+76.
+77.def main():
+78.
+79.    #处理传入参数
+80.    options, poetry_file = parse_args()
+81.    #读取文件
+82.    poem = open(poetry_file).read()
+83.    #实例化PoetryFactory，将poem传入
+84.    factory = PoetryFactory(poem)
+85.
+86.    #导入reactor
+87.    from twisted.internet import reactor
+88.
+89.    #开始监听
+90.    port = reactor.listenTCP(options.port or 9000, factory,
+91.                             interface=options.iface)
+92.
+93.    print 'Serving %s on %s.' % (poetry_file, port.getHost())
+94.    #开始执行reactor
+95.    reactor.run()
+96.
+97.
+98.if __name__ == '__main__':
+99.    main()
+100.
+101.
+102.
+103.
+
+
+client:
+1.
+2.# This is the Twisted Get Poetry Now! client, version 3.0.
+3.
+4.# NOTE: This should not be used as the basis for production code.
+5.
+6.
+7.import optparse  #导入参数处理模块，据官方文档python2.7之后将使用argparse
+8.
+9.#导入Protocol, ClientFactory两个牛逼的类
+10.from twisted.internet.protocol import Protocol, ClientFactory
+11.
+12.#处理参数
+13.def parse_args():
+14.    usage = """usage: %prog [options] [hostname]:port ...
+15.
+16.This is the Get Poetry Now! client, Twisted version 3.0
+17.Run it like this:
+18.
+19.  python get-poetry-1.py port1 port2 port3 ...
+20."""
+21.    #实例化
+22.    parser = optparse.OptionParser(usage)
+23.
+24.    #处理参数，因为只需要一个address，前面option的参数这里不需要了，咱就直接用_代替。
+25.    _, addresses = parser.parse_args()
+26.
+27.    #处理address，如果不存在address，就输出错误
+28.    if not addresses:
+29.        print parser.format_help()
+30.        parser.exit()
+31.
+32.    #定义一个处理address的参数
+33.    def parse_address(addr):
+34.        #处理addr
+35.        if ':' not in addr:
+36.            host = '127.0.0.1'
+37.            port = addr
+38.        else:
+39.            host, port = addr.split(':', 1)
+40.        #处理端口
+41.        if not port.isdigit():
+42.            parser.error('Ports must be integers.')
+43.        #
+44.        #返回主机名和端口：host，port
+45.        return host, int(port)
+46.
+47.    #考虑到address可能有多个，因此使用map函数分别对列表中的address进行处理
+48.    return map(parse_address, addresses)
+49.
+50.
+51.#自定义一个protocol的子类
+52.class PoetryProtocol(Protocol):
+53.
+54.    #开始接受poem
+55.    poem = ''
+56.
+57.    #重构datareceived方法：
+58.    def dataReceived(self, data):
+59.        #将收到的data和poem连接上。。。
+60.        self.poem += data
+61.
+62.    #重构connectionLost方法
+63.    def connectionLost(self, reason):
+64.        self.poemReceived(self.poem)
+65.
+66.    #定义接受poem接受方法
+67.    def poemReceived(self, poem):
+68.        #poem_finished
+69.        self.factory.poem_finished(poem)
+70.
+71.#定义一个ClientFactory的一个子类
+72.class PoetryClientFactory(ClientFactory):
+73.
+74.    #将PoetryProtocol赋值给protocol
+75.    protocol = PoetryProtocol
+76.
+77.    def __init__(self, callback):
+78.        #自定义一个callback参数
+79.        self.callback = callback
+80.
+81.    #定义poem_finished方法，调用callback参数
+82.    def poem_finished(self, poem):
+83.        self.callback(poem)
+84.
+85.
+86.#定义下载poem的函数，主要输入为host，和port
+87.def get_poetry(host, port, callback):
+88.    """
+89.    Download a poem from the given host and port and invoke
+90.
+91.      callback(poem)
+92.
+93.    when the poem is complete.
+94.    """
+95.    #导入牛逼的teactor
+96.    from twisted.internet import reactor
+97.    #实例化PoetryClientFactory，导入参数callback
+98.    factory = PoetryClientFactory(callback)
+99.    #监听主机和端口
+100.    reactor.connectTCP(host, port, factory)
+101.
+102.
+103.def poetry_main():
+104.    #得到addresses
+105.    addresses = parse_args()
+106.
+107.    #导入牛逼的reactor
+108.    from twisted.internet import reactor
+109.    #定义poem
+110.    poems = []
+111.    #定义函数：接受poem
+112.    def got_poem(poem):
+113.        #将poem添加到poems列表
+114.        poems.append(poem)
+115.        #如果全部接受完成，就stop
+116.        if len(poems) == len(addresses):
+117.            reactor.stop()
+118.
+119.    #循环addresses
+120.    for address in addresses:
+121.        host, port = address
+122.        #
+123.        get_poetry(host, port, got_poem)
+124.
+125.    reactor.run()  #开始执行
+126.
+127.    #将收到的poem都打印出来
+128.    for poem in poems:
+129.        print poem
+130.
+131.
+132.if __name__ == '__main__':
+133.    poetry_main()
+
