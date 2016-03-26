@@ -1,23 +1,24 @@
 import pika
-
-connection = pika.BlockingConnection(pika.ConnectionParameters(host="localhost"))
+import time
+connection = pika.BlockingConnection(pika.ConnectionParameters("localhost"))
 channel = connection.channel()
 
-#channel.queue_declare(queue="hello",durable=True)
+channel.queue_declare("h1")
 
-def call_back(ch, method, properties,body):
-    print "-->ch:",ch
-    print "-->me:",method
-    print "-->pr:",properties
-    print "[x] received %r" % body
-    import time
-    time.sleep(1)
-    print 'ok'
-    ch.basic_ack(delivery_tag = method.delivery_tag)
+#print("channel-->",channel)
+#consumer_callback(channel, method, properties, body)
 
-channel.basic_consume(call_back,
-                      queue="hello",
-                      no_ack=True,
-                      )
 
+def callback(ch, method, properties, body):
+    #print("ch-->",ch)
+    print("reciving message...")
+    print("-->",body)
+    time.sleep( str(body).count(".") )
+    print("Done.")
+
+
+
+channel.basic_qos(prefetch_count=1)  #每次接受一条消息，这样保证不同
+                                    #的设备能够全负荷使用
+channel.basic_consume(callback,"h1",)
 channel.start_consuming()
