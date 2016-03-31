@@ -1,32 +1,35 @@
-#目录
+# 目录
+
 [TOC]
 
-#1.Twsited网络框架初探
+# 1.Twsited网络框架初探
 Twisted是一个事件驱动的网络框架，其中包含了诸多功能，例如：网络协议、线程、数据库管理、网络操作、电子邮件等。　
 
 本次我们只学习一些关于异步IO相关的简单使用，将来陆续扩展。
 
-##（1）事件驱动
+## （1）事件驱动
 >“ Twisted is an event-driven networking framework ”
 
 twisted网络框架以“事件”为中心，event 是 Twisted 运转的引擎，是发生各种动作的启动器，是牵一发而动全身的核心部件。
 其中很重要的一个对象reactor：为程序运行建立必须的全局循环（event loop）
-##（2）异步框架
+## （2）异步框架
 > "Twisted is event-based, asynchronous framework"
 
 这个“异步”功能的代表就是 defferred。
 defferred 的作用类似于“多线程”，负责保障多头连接、多项任务的异步执行。
 
-##（3）创建client的套路
-
-
-
-##（4）创建server的套路
+## （3）创建client的套路
 
 
 
 
-##（5）examples-1：echoserver and client
+
+## （4）创建server的套路
+
+
+
+
+## （5）examples-1：echoserver and client
 前面两个套路还没有总结出来，后续再补充，先来看看最简单的例子。
 EchoServer:
 ```python
@@ -88,7 +91,7 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-##（6）example2：再来一个传输文件的例子
+## （6）example2：再来一个传输文件的例子
 
 server：
 
@@ -334,9 +337,9 @@ if __name__ == '__main__':
 
 
 
-#2.Redis数据库
+# 2.Redis数据库
 
-##(1)安装redis
+## (1)安装redis
 ubuntu安装：
  > apt-get install redis-server
 
@@ -361,7 +364,7 @@ tcp6       0      0 :::22                   :::*                    LISTEN      
 
 ```
 
-##(2)安装python-redis
+## (2)安装python-redis
 
 如果有没pip，就安装之：
 ```python
@@ -392,9 +395,9 @@ root@felo-virtual-machine:~#
 
 
 
-##(3)python-redis操作
+## (3)python-redis操作
 
-###(a) set和get
+### (a) set和get
 
 ```python
 
@@ -405,7 +408,7 @@ print(r.get("foo"))
 
 ```
 
-###(b) 连接池
+### (b) 连接池
 
 ```python
 import redis
@@ -415,14 +418,14 @@ r.set("foo","bar")
 print(r.get("foo"))
 ```
 
-###(c) 操作
+### (c) 操作
 
 
 
 
-#3.RabbitMQ队列
+# 3.RabbitMQ队列
 
-##（1）rabbitMQ的安装
+## （1）rabbitMQ的安装
 这里用的ubuntu，记录一下ubuntu上的安装，
 ```
 felo@u01:~$ uname -a
@@ -457,8 +460,6 @@ felo@u01:~$
 #pip3 install pika
 ```
 
-##（2）rabbitmq使用
+## （2）rabbitmq使用
 python采用pika库使用rabbitmq总结，多篇笔记和示例
 http://blog.csdn.net/chenjiebin/article/details/8253433
-
-
