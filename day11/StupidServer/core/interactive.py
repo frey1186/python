@@ -3,6 +3,7 @@ import socket
 import sys
 from paramiko.py3compat import u
 
+
 # windows does not have termios...
 try:
     import termios
@@ -21,7 +22,6 @@ def interactive_shell(chan):
 
 def posix_shell(chan):
     import select
-    
     oldtty = termios.tcgetattr(sys.stdin)
     try:
         tty.setraw(sys.stdin.fileno())
@@ -36,6 +36,7 @@ def posix_shell(chan):
                     x = u(chan.recv(1024))
                     if len(x) == 0:
                         sys.stdout.write('\r\n*** EOF\r\n')
+                        exit_flag = True
                         break
                     sys.stdout.write(x)
                     sys.stdout.flush()
@@ -46,7 +47,7 @@ def posix_shell(chan):
                 if x != "\r":
                     cmd += x
                 else:
-                    print("-->cmd:",cmd,end="")
+                    #print("-->cmd:",cmd,end="")
                     #记录日志：时间，cmd
                     cmd = ""
 
@@ -57,7 +58,7 @@ def posix_shell(chan):
     finally:
         termios.tcsetattr(sys.stdin, termios.TCSADRAIN, oldtty)
 
-    
+
 # thanks to Mike Looijmans for this code
 def windows_shell(chan):
     import threading

@@ -115,6 +115,8 @@ if __name__ == '__main__':
 
     res = session.query(Host).filter(and_(Host.hostname.like("ub%"), Host.port > 20)).all()
     print("-->",res)
+    for i in res:
+        print(i.id)
 
 
 

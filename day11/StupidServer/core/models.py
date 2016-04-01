@@ -9,20 +9,9 @@ from sqlalchemy_utils import ChoiceType,PasswordType
 import os,sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 sys.path.append(BASE_DIR)
 
-#from conf.settings import db_connection
-db_connection = {
-"db_type":"mysql",    #mysql,oracle,...
-"conn_api":"pymysql",  #pymysql,mysqldb,...
-"hostname":"localhost",
-"username":"root",
-"password":"root",
-"port":3306,
-"db_name":"stupiddb",
-
-}
+from conf import  settings
 
 
 
@@ -94,7 +83,10 @@ class HostUser(Base):
     __table_args__ = (UniqueConstraint( 'host_id','username', name='_host_username_uc'),)
 
     def __repr__(self):
-        return  "<id=%s,name=%s>" %(self.id,self.username)
+        return  "<id=%s,name=%s,password=%s,host_id=%s>" %(self.id,
+                                                           self.username,
+                                                           self.password,
+                                                           self.host_id)
 
 
 
@@ -129,13 +121,13 @@ class AuditLog(Base):
 
 
 
-connection_text = "%s+%s://%s:%s@%s:%s/%s" % (db_connection["db_type"],
-                                              db_connection["conn_api"],
-                                              db_connection["username"],
-                                              db_connection["password"],
-                                              db_connection["hostname"],
-                                              db_connection["port"],
-                                              db_connection["db_name"],
+connection_text = "%s+%s://%s:%s@%s:%s/%s" % (settings.db_connection["db_type"],
+                                              settings.db_connection["conn_api"],
+                                              settings.db_connection["username"],
+                                              settings.db_connection["password"],
+                                              settings.db_connection["hostname"],
+                                              settings.db_connection["port"],
+                                              settings.db_connection["db_name"],
                                                 )
 #engine = create_engine("mysql+mysqldb://root:123@localhost:3306/stupid_jumpserver",echo=False)
 engine = create_engine(connection_text,echo=False)
@@ -145,10 +137,22 @@ engine = create_engine(connection_text,echo=False)
 SessionClass = sessionmaker(bind=engine)
 session = SessionClass()
 
+# h1 = Host(hostname="localhost",ip_addr="127.0.0.1")
+# h2 = Host(hostname="ubuntu01",ip_addr="192.168.19.110")
+# session.add_all([h1,h2])
 
+
+
+
+# u1 = UserProfile(username = "felo",password="felo")
+# u2 = UserProfile(username = "root",password="root")
+# session.add_all([u1,u2])
+# session.commit()
 
 #AuditLog(userprofile_id=,)
-
+# res = session.query(UserProfile).filter(UserProfile.username=="felo").first()
+# print(res)
+# print(res.groups)
 
 
 

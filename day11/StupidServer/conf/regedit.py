@@ -9,4 +9,5 @@ actions = {
     "initialize":views.initialize,
     # "syncdb":views.syncdb,
     # "syncdb":views.syncdb,
+    "cmd":views.cmd,
 }
