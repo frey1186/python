@@ -4,7 +4,7 @@ import pika
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
 channel = connection.channel()
 # channel.queue_declare(queue="test")
-channel.basic_publish(exchange='example',
+channel.basic_publish(exchange='example_on_class',
                       routing_key='test',
                       body='Test Message')
 connection.close()

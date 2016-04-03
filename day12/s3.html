@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="http://10.0.4.42:8000/django_form/" enctype="multipart/form-data" method="post">
+        <p>
+            host:<input type="text" name = "host"/>
+            password:<input type="password" name="pwd"/>
+        </p>
+
+        <div>
+            <hr/>
+            <h4>爱好</h4>
+            足球：<input type="checkbox" name="favor" value="1"/>
+            篮球：<input type="checkbox" name="favor" value="2"/>
+            排球：<input type="checkbox" name="favor" value="3"/>
+        </div>
+
+        <div>
+            <hr/>
+            <h4>性别</h4>
+            男：<input type="radio" name="sex" value="1"/>
+            女：<input type="radio" name="sex" value="0"/>
+            中：<input type="radio" name="sex" value="2"/>
+        </div>
+        <div>
+            <hr/>
+            <h4>城市</h4>
+            <select name="city">
+                <option selected="selected">北京</option>
+                <option>上海</option>
+                <option>广州</option>
+            </select>
+        </div>
+
+
+        <hr />
+        备注：<br/>
+        <textarea name="mono" style="width: 400px"></textarea>
+
+        <hr/>
+        <div>
+            <input type="file" name="file_name" />
+        </div>
+        <hr/>
+        <input type="submit" value="submit"/>
+
+    </form>
+</body>
+</html>
