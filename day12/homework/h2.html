@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>
+
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <div style="width: 400px;float: left;height: 500px;background-color: #00a2ca">
+            <div>
+                <div>
+                    <label for="username">用户名:</label>
+                    <input id="username" type="text" name = "username"/>
+                </div>
+                <div>
+                    <label for="pwd">密码:</label>
+                    <input id="pwd" type="password" name="pwd"/>
+                </div>
+                <div>
+                    <label for="pwdagain">重复密码:</label>
+                    <input id="pwdagain" type="password" name="pwdagain"/>
+                </div>
+                <!--用户名、密码、重复密码、省份（下拉菜单）、性别、爱好（多选），使用label来修饰。-->
+                <div>
+                    省份:
+                    <select>
+                        <optgroup label="大城市">
+                            <option>北京</option>
+                            <option>上海</option>
+                            <option>广州</option>
+                        </optgroup>
+                        <optgroup label="牛逼城市">
+                            <option selected="selected">东莞</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div>
+                    性别:
+                    <input type="radio" name="sex"/>男
+                    <input type="radio" name="sex"/>女
+                </div>
+
+                <div>
+                    爱好：<br/>
+                    <input type="checkbox" name="favor" value="1"/>足球
+                    <input type="checkbox" name="favor" value="2"/>篮球
+                    <input type="checkbox" name="favor" value="3"/>排球<br/>
+                    <input type="checkbox" name="favor" value="1"/>皮球
+                    <input type="checkbox" name="favor" value="2"/>乒乓球
+                    <input type="checkbox" name="favor" value="3"/>台球<br/>
+                    <input type="checkbox" name="favor" value="1"/>唱歌
+                    <input type="checkbox" name="favor" value="2"/>跳舞
+                    <input type="checkbox" name="favor" value="3"/>吃米线<br/>
+                </div>
+
+                <div>
+                    <input type="submit" value="注册"/>
+                </div>
+        </div>
+        </div>
+        <div style="width: 600px;float: left;height: 500px;">
+            <img src="1.jpg" style="height: 500px;right: 0px"/>
+        </div>
+    </div>
+</body>
+</html>
