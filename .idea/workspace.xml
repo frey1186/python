@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14dbe7b8-e985-4786-9e99-e8fe825f074b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day12/homework/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day12/homework/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day12/homework/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day12/homework/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day12/homework/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103211/day12/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103211/day12/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103211/day12/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103211/day12/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103211/day12/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103211/day12/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day12/homework/h1_1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day12/homework/h2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103211/day12/h1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103211/day12/h1_1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103211/day12/h2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stu103211/day12/h2.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/day12/homework/137570606360.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day12/homework/h1.html" afterPath="$PROJECT_DIR$/day12/homework/h1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day12/homework/h2.html" afterPath="$PROJECT_DIR$/day12/homework/h2.html" />
     </list>
     <ignored path="python.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -129,8 +109,8 @@
       <file leaf-file-name="h2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/day12/homework/h2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.08648649">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state vertical-scroll-proportion="-0.48375452">
+              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1045,7 +1025,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459837315365</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="2016-4-7 23:45:50 day12 homework update">
+      <created>1460043969502</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1460043969503</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1096,6 +1082,7 @@
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15885022" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.49346405" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28431374" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35784313" sideWeight="0.5091047" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32189542" sideWeight="0.49676898" order="8" side_tool="false" content_ui="tabs" />
@@ -1105,7 +1092,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27987897" sideWeight="0.50653595" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1155,7 +1141,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="增加流程图" />
     <MESSAGE value="last change for homework" />
     <MESSAGE value="last change for day02 homework" />
     <MESSAGE value="day03" />
@@ -1180,7 +1165,8 @@
     <MESSAGE value="2016-4-1 10:50:36 day11 homework updata2" />
     <MESSAGE value="2016-4-3 11:13:04 classnote" />
     <MESSAGE value="2016-4-5 14:21:50" />
-    <option name="LAST_COMMIT_MESSAGE" value="2016-4-5 14:21:50" />
+    <MESSAGE value="2016-4-7 23:45:50 day12 homework update" />
+    <option name="LAST_COMMIT_MESSAGE" value="2016-4-7 23:45:50 day12 homework update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1658,6 +1644,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9424084">
           <caret line="70" column="10" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#5;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1707,6 +1705,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.7853403">
           <caret line="89" column="7" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1714,13 +1713,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.109947644">
           <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/day12/homework/h2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.08648649">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state vertical-scroll-proportion="-0.48375452">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
