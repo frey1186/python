@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎莅临指导</title>
+</head>
+<body>
+    <input type="button" value="stop" onclick="StopInte();"/>
+
+    <script>
+        //obj = setInterval("Func()",1000);
+        obj1 = setTimeout("Func()",1000);
+        function StopInte(){
+            clearTimeout(obj1);
+            clearInterval(obj);
+        }
+        function Func(){
+            var t = document.title;
+            var firstChar = t.charAt(0);
+            var subChar = t.substring(1, t.length);
+            var newTitle = subChar + firstChar;
+            document.title = newTitle;
+        }
+    </script>
+</body>
+</html>

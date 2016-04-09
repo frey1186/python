@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>j2</title>
+</head>
+<body>
+
+    <div>
+        <div id="n1">nnnnnnnn1</div>
+        <a>asdasdasdada</a>
+    </div>
+
+    <ul>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ul>
+
+
+    <div>
+        <div class="c1">cccccc1</div>
+        <div class="c1">cccccc2</div>
+        <div class="c1">cccccc3</div>
+        <div class="c1">cccccc4</div>
+    </div>
+
+    <form>
+        <p><input name="username" value="felo"/></p>
+        <p><input name="password" value="123"/></p>
+
+    </form>
+
+
+
+    <div>
+        <div id="num" style="display: inline">1</div>
+        <input type="button" value="add" onclick="myAdd()"/>
+    </div>
+
+
+    <div>
+        <input id="n2" type="text"/>
+        <select id="n3">
+            <option value="1" selected="selected">shanghai</option>
+            <option value="2">beijing</option>
+            <option value="3">guangzhou</option>
+        </select>
+        <textarea id="n4">i am the textarea...</textarea>
+        <input type="button" value="getValue" onclick="GetValue();"  />
+    </div>
+
+    <br>
+    <hr>
+
+    <div>
+        <input id="search" type="text" value="请输入关键字" onfocus="Focus();"
+        onblur="Blur()"/>
+    </div>
+
+
+    <script>
+//        var nid = document.getElementById("n1");   //字符串，因为id是唯一的。
+//        console.log(nid.innerText);
+//
+//        var lis = document.getElementsByTagName("li");  //列表
+//        for(var i in lis){
+//            lis[i].innerText = i;
+//        }
+//
+//        var c1s = document.getElementsByClassName("c1");  //样式为c1的列表
+//        for(var i in c1s){
+//            c1s[i].innerText = i;
+//            console.log(i.value)
+//        }
+
+//        var user = document.getElementsByName("username")[0];  //列表
+//        var pwd = document.getElementsByName("password")[0];  //列表
+//        user.value = "alex";
+//        pwd.value = "123123";
+//        console.log(user.value,pwd.value)
+
+//        var user = document.getElementsByName("username");  //列表
+//        console.log(user)
+
+        function myAdd(){
+            var text = document.getElementById("num");
+            m = text.innerText;
+            m = parseInt(m);
+            m += 1;
+            text.innerText = m
+        }
+
+        function GetValue(){
+            var obj = document.getElementById("n4");
+            alert(obj.value);
+            obj.value = "2"
+        }
+
+        function Focus(){
+            var obj = document.getElementById("search");
+            if(obj.value == "请输入关键字"){
+                obj.value = "";
+            }
+        }
+
+        function Blur(){
+            var obj = document.getElementById("search");
+            if(!obj.value.trim()) {
+                obj.value = "请输入关键字";
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

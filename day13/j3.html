@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>j3</title>
+</head>
+<body>
+    <a href="http://www.baidu.com" onclick=" return AddElement()">添加</a>
+    <div id="con"></div>
+    <script type="text/javascript">
+        function AddElement(){
+            var obj = document.createElement("input");
+            obj.type ="text";
+            obj.value = "123";
+            obj.style = "display:block";
+            var nid = document.getElementById("con");
+            nid.appendChild(obj);
+//
+//            var obj2 = "<input  type='text' />";
+//            nid.innerHTML = obj2;
+//            // 'beforeBegin', 'afterBegin', 'beforeEnd',  'afterEnd'
+//            nid.insertAdjacentHTML("beforeEnd",obj2);
+
+            return false
+        }
+    </script>
+</body>
+</html>
