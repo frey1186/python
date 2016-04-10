@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework terminator</title>
+    <style>
+
+        .tablecss{
+            width: 500px;
+            background-color: #11e2b5;
+        }
+
+        .editlink{
+            background-color: #f1ad4f;
+            color: white;
+            height: 25px;
+            width: 100px;
+            line-height: 25px;
+            display: inline;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <input type="button" value="全选" onclick="PickingAll();"/>
+        <input type="button" value="反选" onclick="PickingOther();"/>
+        <input type="button" value="完成" onclick="CancelAll();"/>
+        <div class="editlink" onclick="StartEdit();">开始编辑</div>
+    </div>
+
+    <table class="tablecss" border="1">
+        <thead>
+            <tr>
+                <th style="width: 50px;">选择</th>
+                <th style="width: 200px;">主机名</th>
+                <th style="width: 50px;">端口</th>
+                <th style="width: 50px;">状态</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input name="choose" type="checkbox"/></td>
+                <td>127.0.0.1</td>
+                <td>22</td>
+                <td>在线</td>
+            </tr>
+            <tr>
+                <td><input name="choose" type="checkbox"/></td>
+                <td>127.0.0.1</td>
+                <td>22</td>
+                <td>在线</td>
+            </tr>
+            <tr>
+                <td><input name="choose" type="checkbox"/></td>
+                <td>127.0.0.1</td>
+                <td>22</td>
+                <td>在线</td>
+            </tr>
+            <tr>
+                <td><input name="choose" type="checkbox"/></td>
+                <td>127.0.0.1</td>
+                <td>22</td>
+                <td>在线</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script src="jquery-1.12.3.js"></script>
+    <script>
+
+        editStatus = false;
+        function PickingAll(){
+            //全选
+//            $(".tablecss :checkbox").attr("checked","checked");
+
+
+            //第一次可以，被取消后就不行啦。。。
+            $(".tablecss input:not(:checked)").attr("checked",true);
+
+            //用js的setAttribute试试
+//            var a =document.getElementsByName("choose");
+//            for(var i=0;i< a.length;i++){
+//                a[i].setAttribute("checked","check");
+//            }
+//
+//            console.log(a);
+//            if(!a.getAttribute("checked")){
+//                a.setAttribute("checked","checked");
+//            }
+
+        }
+
+        function PickingOther(){
+            //反选
+            var checkedList = $(".tablecss :checked");
+            var unCheckedList = $(".tablecss input:not(:checked)");
+//            console.log(checkedList,UncheckedList);
+            unCheckedList.attr("checked",true);
+            checkedList.removeAttr("checked");
+
+//            $(".tablecss :checked").attr("checked",false);
+
+            //用js的setAttribute试试
+//            var a =document.getElementsByName("choose");
+//            for(var i=0;i< a.length;i++){
+//                a[i].setAttribute("checked",false);
+//            }
+
+        }
+
+        function CancelAll(){
+            StopEdit();
+            $(".tablecss :checked").removeAttr("checked");
+//            $(".tablecss :checked").attr("checked",false);
+
+        }
+
+        function Td2Input(obj){
+            //先处理前面两个主机名和端口
+            var txt = obj.text();  //将obj中的内容取出
+            obj.text("");       //清空obj中的内容
+            var input = document.createElement("input");  //创建一个input
+            input.type = "text";
+            input.value = txt;
+            obj[0].appendChild(input);  //加到obj下面
+
+        }
+
+        function Td2Select(obj){
+            //处理状态 select
+            var sel = obj.text();
+            obj.text("");
+            var select = document.createElement("select");
+            var opt = new Option("在线","在线");
+            select.options.add(opt);
+            opt = new Option("下线","下线");
+            select.options.add(opt);
+            obj[0].appendChild(select);
+        }
+
+        function Input2Td(obj){
+            var txt =obj.children("input").val();
+//            console.log(txt);
+            obj.html(txt);
+        }
+
+        function Select2Td(obj){
+            var txt =obj.find(":selected").text();
+            //console.log(txt);
+            obj.html(txt);
+        }
+
+        function StopEdit(){
+            //修改编辑按钮
+            if(!editStatus){
+                return false;
+            }else{
+                $(".editlink").text("开始编辑");
+                editStatus = false;
+            }
+            var checkedList = $(".tablecss :checked");
+            for(var i=0;i<checkedList.length;i++){
+                var alist =checkedList.eq(i).parent().nextAll();
+                //console.log(alist);
+                //先处理前面两个主机名和端口
+                Input2Td(alist.eq(0));
+                Input2Td(alist.eq(1));
+                //处理状态 select
+                Select2Td(alist.eq(2));
+            }
+        }
+
+        function StartEdit(){
+            var checkedList = $(".tablecss :checked");
+            //修改编辑按钮
+            //如果编辑状态 或者沒有选中任何标签
+            if(editStatus || checkedList.length==0){
+                return false;
+            }else{
+                $(".editlink").text("编辑中...");
+                editStatus = true;
+            }
+
+            for(var i=0;i<checkedList.length;i++){
+                var alist =checkedList.eq(i).parent().nextAll();
+                //console.log(alist);
+                //先处理前面两个主机名和端口
+                Td2Input(alist.eq(0));
+                Td2Input(alist.eq(1));
+                //处理状态 select
+                Td2Select(alist.eq(2));
+            }
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <select>
+      <option value="1">Flowers</option>
+      <option value="2" selected="selected">Gardens</option>
+      <option value="3">Trees</option>
+    </select>
+
+    <table class="tablecss" border="1">
+        <thead>
+            <tr>
+                <th style="width: 50px;">选择</th>
+                <th style="width: 200px;">主机名</th>
+                <th style="width: 50px;">端口</th>
+                <th style="width: 50px;">状态</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input name="choose" type="checkbox"/></td>
+                <td>127.0.0.1</td>
+                <td>22</td>
+                <td id="123123">
+                    <select>
+                        <option value="zaixian" selected="selected">在线</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input name="choose" type="checkbox"/></td>
+                <td>127.0.0.1</td>
+                <td>22</td>
+                <td>在线</td>
+            </tr>
+            <tr>
+                <td><input name="choose" type="checkbox"/></td>
+                <td>127.0.0.1</td>
+                <td>22</td>
+                <td>在线</td>
+            </tr>
+            <tr>
+                <td><input name="choose" type="checkbox" checked="checked"/></td>
+                <td>127.0.0.1</td>
+                <td>22</td>
+                <td>在线</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script src="homework/jquery-2.2.3.js"></script>
+    <script>
+//        console.log($("select option:selected"));
+        console.log($("#123123").find(":selected").text());
+//        console.log($("select option:selected").val(), typeof $("select option:selected").val());
+
+
+
+
+    </script>
+</body>
+</html>
