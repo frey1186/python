@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex</title>
+</head>
+<body>
+    <form>
+      <label>Name:</label>
+      <input name="name" />
+      <fieldset>
+          <label>Newsletter:</label>
+          <input name="newsletter" />
+     </fieldset>
+    </form>
+    <input name="none" />
+    <button>Clone Me!</button>
+
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+        var a = $("form input").val();
+        console.log(a);
+        $("button").click(function(){
+            $(this).clone(true).insertAfter(this);
+        });
+    </script>
+</body>
+</html>

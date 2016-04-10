@@ -8,13 +8,19 @@
             float: left;width: 30%;height: 500px;background-color: antiquewhite;
         }
         .content{
-            float: left;width: 70%;height: 500px;background-color: blue;
+            float: left;width: 70%;height: 500px;background-color: rgba(63, 112, 137, 0.22);
         }
         .title{
-            background-color: black;
-            color: white;
-            height: 50px;
-            line-height: 50px;
+            background-color: rgba(246, 66, 145, 0.5);
+            color: #000000;
+            height: 40px;
+            line-height: 40px;
+            border: #dcdcdc solid 1px;
+            font-family: 华文楷体;
+        }
+        .body{
+            line-height: 20px;
+
         }
         .hide{
             display: none;
@@ -59,11 +65,13 @@
     <script src="jquery-2.2.3.js"></script>
     <script>
         function Func(ths){
-            $(ths).next().removeClass("hide");
-            $(ths).parent().siblings().find(".body").addClass("hide")
-//            if($(ths).next().hasClass("hide")){
-//                $(ths).next().addClass("hide");
-//            }
+
+            if(!$(ths).next().hasClass("hide")){
+                $(ths).next().addClass("hide");
+            }else{
+                $(ths).next().removeClass("hide");
+                $(ths).parent().siblings().find(".body").addClass("hide");
+            }
         }
     </script>
 </body>
