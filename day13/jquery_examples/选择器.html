@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>choose</title>
+    <style>
+        .aa {
+
+            font-size: 100px;
+            color: #c7254e;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="b">
+        <p>test of pppppp</p>
+        <a href="http://www.baidu.com"> test of aaaaaaa</a>
+    </div>
+    <div id="d1" class="c">
+        <p>test of pppppp</p>
+        <a href="http://www.google.com">test of aaaaaaa</a>
+    </div>
+
+    <button id="bt1" onclick="ChangeColor();">yes
+    </button>
+
+    <script src="../jquery-2.2.3.js"></script>
+    <script>
+
+//        $(function () {
+//            //$("p").addClass("aa");//所有p元素
+//            //$("div.b").addClass("aa");//所有div且样式为b的元素
+//            //$("#d1").addClass("aa");//id为d1的元素
+//
+//            //$("[href]").addClass("aa");//带有href属性的元素
+//            //$("[href='http://www.baidu.com']").addClass("aa");//带有href元素，且值等于后面值的元素
+//            //$("[href!='http://www.baidu.com']").addClass("aa");//貌似不是带有href且不是后面值的元素
+//            //$("[href$='.com']").addClass("aa");//带有href参数且值以.com结尾
+//
+//            //$("p").css("background-color","pink");//所有p元素,修改css为背景粉红色
+//
+//
+//
+//        });
+
+        function ChangeColor() {
+            $(this).css("background-color","green");
+            $("p").css("background-color","pink");//所有p元素,修改css为背景粉红色
+        }
+    </script>
+</body>
+</html>
