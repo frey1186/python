@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+</head>
+<body>
+    <input type="button" value="add"/>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+//        $(function(){
+////            $("li").click(function(){
+////                alert($("li").text())
+////            })
+//
+//            $("li").bind("click",function(){
+//                alert($(this).text());
+//
+//
+//            })
+//
+//
+//        });
+
+        $("ul").delegate("li","click",function(){
+                alert($(this).text());
+            });
+
+        $("input:button").bind("click",function(){
+            $("ul").append("<li>add1</li>")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab</title>
+    <style>
+        .tab_box .box_menu{
+            background-color: #DDDDDD;
+            border-top: #DDDDDD solid 2px;
+        }
+        .tab_box .box_body {
+            background-color: #FFFFFF;
+        }
+        .hide {
+            display: none;
+        }
+        .current_color {
+            color: red;
+
+            border-top: red 2px solid;
+            background-color: white;
+        }
+        .box_menu a {
+            border-right: solid black 1px;
+            line-height: 40px;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab_box">
+        <div class="box_menu">
+            <!--menu-->
+
+            <a alex="c1" onclick="ChangeTab(this);" class="current_color">menu1</a><!--
+            --><a alex="c2" onclick="ChangeTab(this);">menu2</a><!--
+            --><a alex="c3" onclick="ChangeTab(this);">menu3</a>
+        </div>
+        <div class="box_body">
+            <!--content-->
+            <div id="c1">content1</div>
+            <div id="c2" class="hide">content2</div>
+            <div id="c3" class="hide">content3</div>
+        </div>
+    </div>
+    <script src="jquery-2.2.3.js"></script>
+    <script >
+        function ChangeTab(ths){
+            //tab标签变颜色
+            $(ths).addClass("current_color").siblings().removeClass("current_color");
+            //点击标签下的内容显示，其他内容隐藏
+            var contentId = "#" + $(ths).attr("alex");
+            $(contentId).removeClass("hide").siblings().addClass("hide");
+        }
+    </script>
+</body>
+</html>

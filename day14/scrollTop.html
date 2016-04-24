@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scrolltop</title>
+    <style>
+
+        .gotop {
+            background-color: #00a2ca;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            height: 50px;
+            width: 100px;
+            border: 1px solid white;
+            line-height: 50px;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: #DDDDDD;height: 2000px;">
+        body
+        body
+        body
+        <br>
+        <hr>
+
+        <div style="height: 200px;background-color: #0cbee7;overflow: auto;">
+            <p>123</p>
+            <p>123</p>
+            <p>123</p>
+            <p>123</p>
+            <p>123</p>
+            <p>123</p>
+            <p>123</p>
+            <p>123</p>
+        </div>
+
+
+        <div>
+            <a onclick="GoTop();" class="gotop hide">back to top</a>
+        </div>
+    </div>
+    <script src="jquery-2.2.3.js"></script>
+    <script>
+        //监听全屏滚轮
+        window.onscroll = function () {
+            //获取滚轮位置
+            var scrollTop = $(window).scrollTop();
+            if(scrollTop>100){
+                $(".gotop").removeClass("hide");
+            }else{
+                $(".gotop").addClass("hide");
+            }
+        };
+
+        function GoTop(){
+            $(window).scrollTop(0);  //设置滚轮位置
+        }
+    </script>
+</body>
+</html>
