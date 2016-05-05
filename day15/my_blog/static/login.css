@@ -1,0 +1,135 @@
+
+.body_c {
+    background-color: bisque;
+}
+
+
+.logo {
+    text-align: center;
+}
+
+.logo div {
+    height: 200px;
+}
+
+.logo div img {
+    height: 100px;
+    width: 120px;
+    padding-top: 100px;
+}
+
+.loginbody {
+    text-align: center;
+}
+
+.createbody {
+    text-align: center;
+    /*margin-top: 100px;*/
+    /*background-color: cornsilk;*/
+    background:gainsboro;
+}
+
+
+
+.bodytitle {
+    text-align: center;
+}
+
+
+.prompt {
+    height: 30px;
+    width: 300px;
+    margin: 0 auto 5px auto;
+    /*border: thin solid gray;*/
+    /*border-radius: 5px;*/
+    /*background-color: pink;*/
+    padding: 0 30px;
+    color: red;
+    line-height: 40px;
+    text-align: left;
+}
+
+form {
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    border: thin solid gray;
+    border-radius: 5px;
+    padding: 30px 30px 50px 30px;
+
+}
+
+form.create_form {
+    height: 500px;
+    border: none;
+    /*float: left;*/
+}
+
+.prompt_text {
+    font-size: 12px;
+    color:green;
+}
+
+form div.label {
+    text-align: left;
+    height: 30px;
+    width: 300px;;
+}
+
+form div.input {
+    text-align: left;
+    height: 50px;
+    width: 300px;;
+
+}
+form div.input input{
+    height: 40px;
+    width: 292px;
+    font-size: 18px;
+    border: thin gray solid;
+    border-radius: 5px;
+}
+
+form div.submit {
+    text-align: left;
+    height: 40px;
+    width: 300px;
+    padding-top: 20px;
+
+}
+form div.submit input {
+    height: 40px;
+    width: 300px;
+    background: #098aff;
+	display: inline-block;
+	color: #fff;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-radius: 5px;
+	cursor: pointer;
+    font-size: 18px;
+}
+
+/*.create_img {*/
+    /*float: left;*/
+    /*height: 500px;*/
+    /*margin-top: 50px;*/
+/*}*/
+
+/*.create_img img{*/
+    /*height: 500px;*/
+/*}*/
+
+.link_to_createAccount {
+    height: 50px;
+    width: 300px;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+.link_to_createAccount a{
+    text-decoration: none;
+    text-decoration-color: #024a80;
+}
+
+.hide {
+    display: none;
+}

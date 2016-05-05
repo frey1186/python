@@ -1,0 +1,510 @@
+BootStrap
+
+一、介绍
+Bootstrap 是一个用于构建响应式网站的前端框架。无论你想构建应用 程序、博客还是 CMS 网站,Bootstrap 都完美适用,只要你想得到, 它都能行。Bootstrap 把 HTML、CSS 和 JavaScript 组合起来,为构建 稳定的网站提供了基础设施,也能提高开发效率。基于默认的网格系 统,布局变成了小菜一碟,按钮、导航和表格也都活脱脱地赏心悦目。 十几个 JavaScript 插件更为我们赋予网站交互能力提供了强大保障。
+
+响应式布局：根据用户设备的不同，进行相应的布局
+
+Bootstrap 是 Mark Otto 和 Jacob Thornton 共同开发的一个开源框架。 最初发布 Bootstrap 的时候,他们两位都在 Twitter 工作。当时,他 们面临着为公司内部提供一套标准化的前端开发工具的需求。在发布 Bootstrap 的那篇博客中,Mark Otto 这样介绍他们的新项目:
+
+Twitter诞生初期,为了完成前端开发任务,工程师们几乎尝试 了自己熟悉的所有库。应用之间的不一致性导致它们难以扩 展和维护。Bootstrap最初就是这个问题的一个解决方案,而且 在Twitter内部第一次Hackweek上得到了认可。Hackweek结束 后,我们手头上的项目已经相当稳定,可以在公司内部部署使 用了。
+    --Mark Otto 
+      https://dev.twitter.com
+
+Bootstrap 是 2011 年 8 月发布的,发布之后就迅速走红。而且,它也 从最初 CSS 驱动的项目,发展到内置了很多 JavaScript 插件和图标, 并且涵盖了表单和按钮元素。Bootstrap 本身支持响应式 Web 设计, 而且拥有一个非常稳健的 12 列、940 像素宽的网格布局系统。值得一 提的是,Bootstrap 网站(http://getbootstrap.com)上还提供了一个构 建工具,让你根据自己的需求选择 CSS 和 JavaScript 功能。所有这一 切让前端 Web 开发有了前瞻性的设计和开发基础,开发效率倍增。上 手使用 Bootstrap 非常简单,跟在网站中整合 CSS 和 JavaScript 没有 什么区别。
+
+
+
+二、文件结构
+
+bootstrap2
+    ├── css
+    │   ├── bootstrap-responsive.css
+    │   ├── bootstrap-responsive.min.css
+    │   ├── bootstrap.css
+    │   └── bootstrap.min.css
+    ├── img
+    │   ├── glyphicons-halflings-white.png
+    │   └── glyphicons-halflings.png
+    └── js
+        ├── bootstrap.js
+        └── bootstrap.min.js
+
+bootstrap3
+    ├── css
+    │   ├── bootstrap-theme.css
+    │   ├── bootstrap-theme.css.map
+    │   ├── bootstrap-theme.min.css
+    │   ├── bootstrap.css
+    │   ├── bootstrap.css.map
+    │   └── bootstrap.min.css
+    ├── fonts
+    │   ├── glyphicons-halflings-regular.eot
+    │   ├── glyphicons-halflings-regular.svg
+    │   ├── glyphicons-halflings-regular.ttf
+    │   ├── glyphicons-halflings-regular.woff
+    │   └── glyphicons-halflings-regular.woff2
+    └── js
+        ├── bootstrap.js
+        ├── bootstrap.min.js
+        └── npm.js
+
+bootstrap-responsive
+    相应式代码，根据分辨率和设备的不同进行布局
+
+
+map文件
+
+    我先说一下什么是source map文件。 source map文件是js文件压缩后，文件的变量名替换对应、变量所在位置等元信息数据文件，一般这种文件和min.js主文件放在同一个目录下。 比如压缩后原变量是map，压缩后通过变量替换规则可能会被替换成a，这时source map文件会记录下这个mapping的信息，这样的好处就是说，在调试的时候，如果有一些JS报错，那么浏览器会通过解析这个map文件来重新merge压缩后的js,使开发者可以用未压缩前的代码来调试，这样会给我们带来很大的方便！ 而这种还原性调试功能，目前只有chorme才具有，所以就会出现标题说的问题，我引入jquery-1.10.2.min.js的时候，在firefox下或者其他浏览器下是好的，在chorme下会报错找不到jquery-1.10.2.min.map文件，404，就是因为以上说的情况，jquery会检测浏览器是否支持source map功能，如果支持的话，那就去下载source map文件，而这个时候如果你引用的是官网的min.js那没问题，它会去自己的目录下找source map文件，而如果jquery.min.js文件在你的服务器上而服务器上又没有source map的话，那就会报错了，所以三种解决办法：一，引用官网文件 二，把source map文件下载下来放到服务器上(推荐) 三，把chorme文件的工具-->开发者工具-->设置-->Enable source maps勾去掉，去掉这个勾，jquery就不会去下载source map文件了！
+
+    https://segmentfault.com/q/1010000000259052
+    http://www.ruanyifeng.com/blog/2013/01/javascript_source_map.html
+
+npm.js
+    忽略，编译bootstrap时使用
+
+bootstrap-theme
+    可选的Bootstrap主题文件（一般不用引入）
+
+
+eot、svg、ttf、woff、woff2
+
+    @font-face语句是css中的一个功能模块，用于实现网页字体多样性的模块(设计者可随意指定字体，不需要考虑浏览者电脑上是否安装)。
+
+    而由于网页中使用的字体类型，也是各浏览器对字体类型有不同的支持规格。 字体格式类型主要有几个大分类：TrueType、Embedded Open Type 、OpenType、WOFF 、SVG。
+
+
+    eot  EOT– Embedded Open Type 
+        EOT是嵌入式字体，是微软开发的技术。允许OpenType字体用@font-face嵌入到网页并下载至浏览器渲染，存储在临时安装文件夹下。
+
+    SVG Scalable Vector Graphics
+        SVG是由W3C制定的开放标准的图形格式。SVG字体就是使用SVG技术来呈现字体，还有一种gzip压缩格式的SVG字体。
+
+    ttf TrueType
+        Windows和Mac系统最常用的字体格式，其最大的特点就是它是由一种数学模式来进行定义的基于轮廓技术的字体，这使得它们比基于矢量的字体更容易处理，保证了屏幕与打印输出的一致性。同时，这类字体和矢量字体一样可以随意缩放、旋转而不必担心会出现锯齿。
+
+    woff WOFF–WebOpen Font Format
+        WOFF（Web开发字体格式）是一种专门为了Web而设计的字体格式标准，实际上是对于TrueType/OpenType等字体格式的封装，每个字体文件中含有字体以及针对字体的元数据（Metadata），字体文件被压缩，以便于网络传输。
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+
+    src: url('fonts/glyphicons-halflings-regular.eot');
+    src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+@font-face
+    @font-face是CSS3中的一个模块，他主要是把自己定义的Web字体嵌入到网页中
+参数说明：
+
+    1、FontName：自定义的字体名称，名称最好与所调用的字体相同，方便识别与引用。在@font-face中声明了，在Web元素中以font-family来引用，如“font-family:"FontName";”
+    2、src:：自定义的字体的存放路径，可以是相对路径也可以是绝路径；
+    3、format：自定义的字体的格式，主要用来帮助浏览器识别，其值主要有以下几种类型：truetype,opentype,truetype-aat,embedded-opentype,avg等；
+    4、weight和style:这两个值大家一定很熟悉，weight定义字体是否为粗体，style主要定义字体样式，如斜体。
+    浏览器兼容性：
+    说到浏览器对@font-face的兼容问题，这里涉及到一个字体format的问题，因为不同的浏览器对字体格式支持是不一致的，这样大家有必要了解一下，各种版本的浏览器支持什么样的字体，前面也简单带到了有关字体的几种格式，下面我就分别说一下这个问题，让大家心里有一个概念：
+
+
+    TureTpe(.ttf)格式：
+        .ttf字体是Windows和Mac的最常见的字体，是一种RAW格式，因此他不为网站优化,支持这种字体的浏览器有【IE9+,Firefox3.5+,Chrome4+,Safari3+,Opera10+,iOS Mobile Safari4.2+】；
+    OpenType(.otf)格式：
+        .otf字体被认为是一种原始的字体格式，其内置在TureType的基础上，所以也提供了更多的功能,支持这种字体的浏览器有【Firefox3.5+,Chrome4.0+,Safari3.1+,Opera10.0+,iOS Mobile Safari4.2+】；
+    Web Open Font Format(.woff)格式：
+        .woff字体是Web字体中最佳格式，他是一个开放的TrueType/OpenType的压缩版本，同时也支持元数据包的分离,支持这种字体的浏览器有【IE9+,Firefox3.5+,Chrome6+,Safari3.6+,Opera11.1+】；
+    Embedded Open Type(.eot)格式：
+        .eot字体是IE专用字体，可以从TrueType创建此格式字体,支持这种字体的浏览器有【IE4+】；
+    SVG(.svg)格式：
+        .svg字体是基于SVG字体渲染的一种格式,支持这种字体的浏览器有【Chrome4+,Safari3.1+,Opera10.0+,iOS Mobile Safari3.2+】。
+
+    https://yfdxs.com/font-face.html
+
+
+伪类：
+    答：伪元素（注意，不是伪类）。       它虽然被收录到css3标准中，但其实主流浏览器都已经支持伪元素了，这其中包括了IE8+。       伪元素实际上在html dom中不存在，但会被浏览器渲染成html的一个节点，比如题主提到的#twitter:before，就是在#twitter这个标签里的开始处插入了一个子元素（节点），同理，:after是在该元素的最后插入子元素，
+
+content：
+    unicode -> 字体对应的图标
+
+
+使用：
+    Bootstrap 插件全部依赖 jQuery请注意，Bootstrap 的所有 JavaScript 插件都依赖 jQuery，因此 jQuery 必须在 Bootstrap 之前引入
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <h1>你好，世界！</h1>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+<meta charset="utf-8">
+    编码
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    Bootstrap 不支持 IE 古老的兼容模式。为了让 IE 浏览器运行最高级别的可用模式渲染显示内容
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    为了确保适当的绘制和触屏缩放，需要在 <head> 之中添加 viewport 元数据标签。
+
+    在移动设备浏览器上，通过为视口（viewport）设置 meta 属性为 user-scalable=no 可以禁用其缩放（zooming）功能。这样禁用缩放功能后，用户只能滚动屏幕，就能让你的网站看上去更像原生应用的感觉。注意，这种方式我们并不推荐所有网站使用，还是要看你自己的情况而定！
+
+<meta name="renderer" content="webkit">
+    国内浏览器厂商一般都支持兼容模式（即 IE 内核）和高速模式（即 webkit 内核），不幸的是，所有国产浏览器都是默认使用兼容模式，这就造成由于低版本 IE （IE8 及以下）内核让基于 Bootstrap 构建的网站展现效果很糟糕的情况。幸运的是，国内浏览器厂商逐渐意识到了这一点，某些厂商已经开始有所作为了
+    目前只有360浏览器支持此 <meta> 标签。希望更多国内浏览器尽快采取行动、尽快进入高速时代！
+
+
+响应式布局
+
+
+@media
+    
+    @media mediatype and|not|only (media feature) {
+        CSS-Code;
+    }
+
+    <link rel="stylesheet" media="mediatype and|not|only (media feature)" href="mystylesheet.css">
+
+mediatype
+    all 用于所有设备
+    aural   已废弃。用于语音和声音合成器
+    braille 已废弃。 应用于盲文触摸式反馈设备
+    embossed    已废弃。 用于打印的盲人印刷设备
+    handheld    已废弃。 用于掌上设备或更小的装置，如PDA和小型电话
+    print   用于打印机和打印预览
+    projection  已废弃。 用于投影设备
+    screen  用于电脑屏幕，平板电脑，智能手机等。
+    speech  应用于屏幕阅读器等发声设备
+    tty 已废弃。 用于固定的字符网格，如电报、终端设备和对字符有限制的便携设备
+    tv  已废弃。 用于电视和网络电视
+
+
+逻辑判断
+
+    and，且
+    not，非
+    only，只有
+
+
+媒体功能
+    aspect-ratio    定义输出设备中的页面可见区域宽度与高度的比率
+    color   定义输出设备每一组彩色原件的个数。如果不是彩色设备，则值等于0
+    color-index 定义在输出设备的彩色查询表中的条目数。如果没有使用彩色查询表，则值等于0
+    device-aspect-ratio 定义输出设备的屏幕可见宽度与高度的比率。
+    device-height   定义输出设备的屏幕可见高度。
+    device-width    定义输出设备的屏幕可见宽度。
+    grid    用来查询输出设备是否使用栅格或点阵。
+    height  定义输出设备中的页面可见区域高度。
+    max-aspect-ratio    定义输出设备的屏幕可见宽度与高度的最大比率。
+    max-color   定义输出设备每一组彩色原件的最大个数。
+    max-color-index 定义在输出设备的彩色查询表中的最大条目数。
+    max-device-aspect-ratio 定义输出设备的屏幕可见宽度与高度的最大比率。
+    max-device-height   定义输出设备的屏幕可见的最大高度。
+    max-device-width    定义输出设备的屏幕最大可见宽度。
+    max-height  定义输出设备中的页面最大可见区域高度。
+    max-monochrome  定义在一个单色框架缓冲区中每像素包含的最大单色原件个数。
+    max-resolution  定义设备的最大分辨率。
+    max-width   定义输出设备中的页面最大可见区域宽度。
+    min-aspect-ratio    定义输出设备中的页面可见区域宽度与高度的最小比率。
+    min-color   定义输出设备每一组彩色原件的最小个数。
+    min-color-index 定义在输出设备的彩色查询表中的最小条目数。
+    min-device-aspect-ratio 定义输出设备的屏幕可见宽度与高度的最小比率。
+    min-device-width    定义输出设备的屏幕最小可见宽度。
+    min-device-height   定义输出设备的屏幕的最小可见高度。
+    min-height  定义输出设备中的页面最小可见区域高度。
+    min-monochrome  定义在一个单色框架缓冲区中每像素包含的最小单色原件个数
+    min-resolution  定义设备的最小分辨率。
+    min-width   定义输出设备中的页面最小可见区域宽度。
+    monochrome  定义在一个单色框架缓冲区中每像素包含的单色原件个数。如果不是单色设备，则值等于0
+    orientation 定义输出设备中的页面可见区域高度是否大于或等于宽度。
+    resolution  定义设备的分辨率。如：96dpi, 300dpi, 118dpcm
+    scan    定义电视类设备的扫描工序。
+    width   定义输出设备中的页面可见区域宽度。
+
+
+
+
+    @media screen and (max-width: 1000px) and (min-width: 800px){
+        body{
+            background-color: red;
+        }
+    }
+    @media screen and (max-width: 800px){
+        body{
+            background-color: green;
+        }
+    }
+
+
+
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="exampleInputName2">Name</label>
+        <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail2">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+      </div>
+      <button type="submit" class="btn btn-default">Send invitation</button>
+    </form>
+
+
+
+    导航条
+
+
+
+
+二、禁用相应式布局
+
+三、布局容器
+    .container
+
+    .container-fluid 
+
+
+四、栅格
+    将一行的宽度按照百分比分成了12份
+
+        .col-xs- *  永远百分比
+        .col-sm- *  屏幕大于750px时，才生效
+        .col-md- *  屏幕大于970px时，才生效
+        .col-lg- *  屏幕大于1170px时，才生效
+
+
+    列偏移 offset
+    嵌套列 row
+    列排序
+        <div class="row">
+            <div class="col-md-9">.col-md-9 .col-md-push-3</div>
+            <div class="col-md-3">.col-md-3 .col-md-pull-9</div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+          <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+        </div>
+
+五、标题
+
+    <h1>h1. Bootstrap heading</h1>
+    <h2>h2. Bootstrap heading</h2>
+    <h3>h3. Bootstrap heading</h3>
+    <h4>h4. Bootstrap heading</h4>
+    <h5>h5. Bootstrap heading</h5>
+    <h6>h6. Bootstrap heading</h6>
+    在标题内还可以包含 <small> 标签或赋予 .small 类的元素，可以用来标记副标题。
+    <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+    <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+    <h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+    <h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+    <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+    <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+
+
+六、内容
+    Bootstrap 将全局 font-size 设置为 14px，line-height 设置为 1.428
+
+    中心内容
+        .lead 将字体大小、加粗、行高修改 （无卵高深用）
+    标记
+        mark标签高亮内容  <mark>highlight</mark> 
+    删除内容
+        del标签删除内容（横线）   
+        <del>This line of text is meant to be treated as deleted text.</del>
+    无用文本
+        s 标签（横线）  
+        <s>This line of text is meant to be treated as deleted text.</s>
+        同删除内容
+    插入文本
+        ins标签（下划线）
+        <ins>This line of text is meant to be treated as an addition to the document.</ins>
+    带下划线的文本
+        u标签
+        <u>This line of text will render as underlined</u>
+
+    小号文本
+        small标签，父容器字体大小的 85% （标题的small是指定的大小）
+
+    着重
+        strong标签
+
+    斜体
+        em标签
+
+    对齐
+        <p class="text-left">Left aligned text.</p>
+        <p class="text-center">Center aligned text.</p>
+        <p class="text-right">Right aligned text.</p>
+        <p class="text-justify">左右对齐</p>
+        <p class="text-nowrap">不换行</p>
+    大小写
+        <p class="text-lowercase">Lowercased text.</p>
+        <p class="text-uppercase">Uppercased text.</p>
+        <p class="text-capitalize">Capitalized text.</p>
+
+    缩略语
+        <abbr title="attribute">attr</abbr>
+    首字母缩略语
+        <abbr title="HyperText Markup Language" class="initialism">HTML</abbr>
+
+
+    地址
+        <address>
+          <strong>Twitter, Inc.</strong><br>
+          795 Folsom Ave, Suite 600<br>
+          San Francisco, CA 94107<br>
+          <abbr title="Phone">P:</abbr> (123) 456-7890
+        </address>
+
+        <address>
+          <strong>Full Name</strong><br>
+          <a href="mailto:424662508@qq.com">424662508@qq.com</a>
+        </address>
+    引用
+        blockquote标签
+
+        <footer> 用于标明引用来源。来源的名称可以包裹进 <cite>标签中。
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+            </blockquote>
+
+        右对齐效果
+            .blockquote-reverse
+
+    无序列表
+        <ul>
+          <li>...</li>
+        </ul>
+    有序列表
+        <ol>
+          <li>...</li>
+        </ol>
+    无样式列表
+        <ul class="list-unstyled">
+          <li>...</li>
+        </ul>
+
+    内联列表
+        <ul class="list-inline">
+          <li>...</li>
+        </ul>
+
+    描述列表
+        <dl>
+          <dt>...</dt>
+          <dd>...</dd>
+        </dl>
+    水平排列的描述
+        <dl class="dl-horizontal">
+          <dt>...</dt>
+          <dd>...</dd>
+        </dl>
+
+        -- 自动截断：text-overflow: ellipsis;
+        --   不换行：white-space: nowrap;
+
+
+    用户输入
+        <kbd> 标签
+
+    代码块
+        <pre> 标签
+
+        .pre-scrollable 类，其作用是设置 max-height 为 350px ，并在垂直方向展示滚动条
+
+    变量
+        var 标签
+
+    程序输出
+        标签
+
+
+
+七、表格
+     table、caption、thead、tbody、tr、th、td
+
+    .table 
+    .table .table-striped  条纹状
+    .table .table-bordered 边框
+    .table .table-hover 鼠标悬停
+    .table .table-condensed 紧缩，padding减少
+    颜色，tr和td都可以加入颜色样式：
+        .active     鼠标悬停在行或单元格上时所设置的颜色
+        .success    标识成功或积极的动作
+        .info       标识普通的提示信息或动作
+        .warning    标识警告或需要用户注意
+        .danger     标识危险或潜在的带来负面影响的动作
+
+    .table-responsive 相应式表格，将任何 .table 元素包裹在 .table-responsive 元素内，即可创建响应式表格，其会在小屏幕设备上（小于768px）水平滚动。当屏幕大于 768px 宽度时，水平滚动条消失。
+
+
+八、表单
+    基本表单
+        .form-group 
+            label
+            .form-control 
+
+    内联表单
+        .form-inline：当行表单，在表单组外面添加.form-inline 类，可以使得表单内联， 如果屏幕宽度小于768px，则失效
+        .sr-only：    隐藏label，class="sr-only"
+        .input-group： 对input标签进行处理
+        .form-horizontal： .form-horizontal 类，并联合使用 Bootstrap 预置的栅格类，可以将 label 标签和控件组水平并排布局
+
+
+
+其他详见：http://v3.bootcss.com/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

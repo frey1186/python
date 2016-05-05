@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block style %}
+    <style>
+        .tablecss{
+            width: 500px;
+            background-color: #11e2b5;
+        }
+
+        .editlink{
+            background-color: #f1ad4f;
+            color: white;
+            height: 25px;
+            width: 100px;
+            line-height: 25px;
+            display: inline;
+        }
+    </style>
+
+{% endblock %}
+
+{#{% block left_content %}#}
+{##}
+{#{% endblock %}#}
+{% block right_title %}
+    <h1>修改表格</h1>
+
+
+{% endblock %}
+{% block right_content %}
+
+    <div>
+        <input type="button" value="全选" onclick="PickingAll();"/>
+        <input type="button" value="反选" onclick="PickingOther();"/>
+        <input type="button" value="取消" onclick="CancelAll();"/>
+        <input id='edit_button' type="button" value="开始编辑" onclick="StartEdit();"/>
+        <input type="button" value="添加" onclick="AddItem();"/>
+        <input type="button" value="删除" onclick="DeleteItem();"/>
+        <input type="submit" value="提交" onclick="SubmitAll();"/>
+    </div>
+
+    <table class="tablecss" border="1">
+        <thead>
+            <tr>
+                <th style="width: 50px;">选择</th>
+                <th style="width: 200px;">主机名</th>
+                <th style="width: 50px;">端口</th>
+                <th style="width: 50px;">状态</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for item in host_list %}
+                <tr>
+                    <td>{{ item.be_checked }}</td>
+                    <td>{{ item.hostname }}</td>
+                    <td>{{ item.port }}</td>
+{#                    循环host_stat字典，匹配item.stat#}
+                    {% for s,v in host_stat %}
+                        {% if s == item.stat %}
+                            <td>{{ v }}</td>
+                        {% endif %}
+                    {% endfor  %}
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static "roweditor.js" %}"></script>
+{% endblock %}

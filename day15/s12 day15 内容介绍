@@ -1,0 +1,285 @@
+s12 Day15 内容
+
+一、作业
+    -- edit_row 实例
+
+二、插件
+
+1、验证
+	a. 获取内容，正则表达式
+	b. return false
+	
+    -- parsleyjs        
+        http://parsleyjs.org/
+    -- jQuery Validate  
+        http://jqueryvalidation.org/
+		
+		# 不建议，直接使用
+		# 自己写， 》==
+2、UI		
+    -- bxslider
+        http://bxslider.com/
+	
+
+	-- Font Awesome
+        http://fontawesome.io/
+		a、图片，自己找图片，挖洞
+		b、现成的图标
+			css
+			使用样式
+			--以前版本
+				css
+				图片库
+				使用样式
+			-- 现在
+				css
+				字体文件
+				使用样式
+		c、css
+			字体文件
+			样式
+		=====》 大图片
+		
+    -- Bootstrap
+        http://www.bootcss.com/
+		
+    -- jQuery EasyUI
+        http://www.jeasyui.com/download/index.php
+    -- jQuery UI
+        http://jqueryui.com/
+
+===================================================================================================
+二、Web框架
+
+Web请求流程
+    -- 原始Web框架
+    -- 自定义Web框架
+    -- MVC 和 MTV
+	
+
+
+需求：安装Jinja2
+
+三、Django
+Django 框架基础
+
+pip install django=1.9.5
+
+project _name
+	project_name   --- 配置文件
+	manage.py
+	app01
+	app02
+	app03
+	
+	
+1、创建Django程序
+	a.  命令
+			django-admin  startproject  mysite   创建project
+			cd mysite
+			python manage.py startapp app01      创建app01
+			python manage.py startapp app02      创建app02
+	b. pycharm
+			创建Django程序
+			Win:
+				终端，python python manage.py startapp app01    -windows
+			Mac:
+				option+R
+					starapp app01
+2、执行django程序
+	进入project
+	
+		python manage.py runserver 127.0.0.1:8000
+		点pycharm >
+		
+3、Django依赖数据库
+		配置，settings
+		生成数据库表：
+			python manage.py makemirations	# 生成配置文件
+			python manage.py migrate        # 根据配置文件创建数据库相关
+		
+4、admin
+		python manage.py createsuperuser
+		...
+		
+		http://localhost:8000/admin/
+			
+			
+5、路由系统
+
+		1、静态路由
+		2、动态路由
+			按照顺序，第n个匹配的数据，交给函数的第n个参数，严格按照顺序
+			模版的方法，将匹配的参数，传给指定的形式参数
+		3、二级路由
+			app01
+				url.py
+			
+			project_name
+				URL:   app01 -> include("app01.url")
+				
+6、基本的数据库操作
+	ORM框架
+		code first
+			自己写类    ->    数据库表
+		db first
+			自己命令数据库表和字典  -->  创建类
+			
+		使用类进行数据操作
+
+	a. 创建类
+	b. 配置
+		setttings.py
+		
+		INSTALLED_APPS = [
+			'django.contrib.admin',
+			'django.contrib.auth',
+			'django.contrib.contenttypes',
+			'django.contrib.sessions',
+			'django.contrib.messages',
+			'django.contrib.staticfiles',
+			"app01",
+		]
+	b. 使用命令根据类创建表
+		python manage.py makemirations	# 生成配置文件
+		python manage.py migrate        # 根据配置文件创建数据库相关
+
+	c. 默认表名
+			appname_classname
+			
+	d. 
+		views中导入models
+		
+	e.
+		POST提交数据
+			settings里操作：
+				MIDDLEWARE_CLASSES = [
+					'django.middleware.security.SecurityMiddleware',
+					'django.contrib.sessions.middleware.SessionMiddleware',
+					'django.middleware.common.CommonMiddleware',
+				   # 'django.middleware.csrf.CsrfViewMiddleware',
+					'django.contrib.auth.middleware.AuthenticationMiddleware',
+					'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+					'django.contrib.messages.middleware.MessageMiddleware',
+					'django.middleware.clickjacking.XFrameOptionsMiddleware',
+				]
+				
+
+
+
+
+
+    -- URL
+    -- View
+    -- Model
+    -- 其他：Ajax 
+    -- 博客：
+            http://www.cnblogs.com/wupeiqi/articles/4491246.html
+            http://www.cnblogs.com/wupeiqi/articles/4508271.html
+
+需求：安装Django
+
+
+# Models       Views    Controllers
+#               模版     处理请求的函数
+# MVC
+
+# models     templates     views
+#               模版     处理请求的函数
+# MTV
+
+# MTV
+# models, 操作数据库
+# templates,模版，html
+# views，处理请求的函数
+
+# 定义URL映射关系
+
+
+================================== 作业 ===========================================
+
+1、登录页面
+	用户名密码
+	request.POST['username']
+	models.UserInfo.objects.filter()
+	
+	跳转到另外页面
+		from django.shortcuts import render,redirect
+		from app01 import models
+		
+		
+		def db_handle(request):
+			# url
+			return redirect('/app02/home/')
+
+2、JS增删改查
+		JS获取修改的内容
+		
+		ajax请求
+			url:   /ajax_req/ --> funct
+			
+		$.ajax({
+			url: "/ajax_req/",
+			type: "post",
+			data: {username: 'alex', password: '123', age: 19},
+			success:function(arg){
+				arg ="OK"
+				if(arg == "OK"){
+					alert("成功");
+				}
+			}
+		})
+	
+3、附加：
+		var data = [
+			{username: 'alex', password: '123', age: 19},
+			{username: 'alex', password: '123', age: 19},
+			{username: 'alex', password: '123', age: 19},
+		]
+		
+		$.ajax({
+			url: "/ajax_req_list/",
+			type: "post",
+			traditional:true,
+			data: {data_list: JSON.stringfy(data)},
+			success:function(arg){
+				arg ="OK"
+				if(arg == "OK"){
+					alert("成功");
+				}
+			}
+		})
+
+		def ajax_req_list(request):
+			re_str = request.POST["data_list"]
+			re_list = json.loads(re_str)
+			for lie in re_list:
+				models.UserInfo.objects.create(username=li['username'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

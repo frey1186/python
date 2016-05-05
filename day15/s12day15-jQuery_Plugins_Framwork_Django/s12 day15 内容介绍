@@ -1,0 +1,48 @@
+s12 Day15 内容
+
+作业
+    -- edit_row 实例
+
+插件
+    -- parsleyjs        
+        http://parsleyjs.org/
+    -- jQuery Validate  
+        http://jqueryvalidation.org/
+    -- bxslider
+        http://bxslider.com/
+    -- Bootstrap
+        http://www.bootcss.com/
+    -- Font Awesome
+        http://fontawesome.io/
+    -- jQuery EasyUI
+        http://www.jeasyui.com/download/index.php
+    -- jQuery UI
+        http://jqueryui.com/
+
+
+Web请求流程
+    -- 原始Web框架
+    -- 自定义Web框架
+    -- MVC 和 MTV
+
+需求：安装Jinja2
+
+
+
+Django 框架基础
+    -- URL
+    -- View
+    -- Model
+    -- 其他：Ajax 
+    -- 博客：
+            http://www.cnblogs.com/wupeiqi/articles/4491246.html
+            http://www.cnblogs.com/wupeiqi/articles/4508271.html
+
+
+需求：安装Django
+
+
+
+
+
+

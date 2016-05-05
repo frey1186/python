@@ -1,0 +1,159 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="{% static "login.css" %}" rel="stylesheet" />
+</head>
+<body>
+    <div class="createbody">
+        <div >
+            <div>
+                <h2>
+                    Join BigHub
+                </h2>
+                <p>
+                    The best way to design, build, and ship software.
+                </p>
+            </div>
+            <!--<div>-->
+                <!--<div class="create_img">-->
+                <!--<img src="static/back.jpg"/>-->
+            <!--</div>-->
+            <form class="create_form" action="/registerhandle/" method="post">
+                <div>
+                    Create your personal account
+                </div>
+                <div class="label">
+                    <label for="username">Username</label>
+
+                </div>
+                <div class="input">
+                    <input id="username" type="text" name="username"/>
+
+                </div>
+                <div class="label prompt_text">
+                    This will be your username.
+                </div>
+
+
+                <div class="label">
+                    <label for="emailaddress">Email Address</label>
+
+                </div>
+                <div class="input">
+                    <input id="emailaddress" type="text" name="emailaddress"/>
+                </div>
+                <div class="label prompt_text">
+                    You will occasionally receive account related emails.
+                </div>
+
+
+                <div class="label">
+                    <label for="phonenumber">Mobel Number</label>
+
+                </div>
+                <div class="input">
+                    <input id="phonenumber" type="text" name="phonenumber" />
+                </div>
+                <div class="label prompt_text" id="num">
+                    This will be your mobel number.
+                </div>
+
+
+                <div class="label">
+                    <label for="password">Password</label>
+
+                </div>
+                <div class="input">
+                    <input id="password" type="password" name="password"/>
+                </div>
+                <div class="label prompt_text">
+                    Use at least one lowercase letter, one numeral, and seven characters.
+                </div>
+
+
+
+                <div class="submit">
+                    <input type="submit" value="Create an account" onclick="return CheckIt();"/>
+                </div>
+
+
+            </form>
+            <!--</div>-->
+
+
+
+        </div>
+
+
+    </div>
+    <script src="{% static "jQuery-1.12.3.js" %}"></script>
+    <script>
+
+
+        function CheckIt(){
+            if(!$("#username").val()){
+                $("#username").parent().next().css("color","red").text("Can NOT be null.");
+                return false;
+            }else if(!$("#password").val()){
+                $("#password").parent().next().css("color","red").text("Can NOT be null.");
+                return false;
+            }
+        }
+        $(function () {
+            //获得焦点的输入框变化底色
+            $(".input input").focusout(function () {
+                $(this).css("background-color","#FFFFFF")
+            }).focusin(function () {
+                $(this).css("background-color","#FFFFCC")
+            });
+
+
+
+
+            //给用户名框定义焦点推出函数
+            $("#username").focusout(
+                    function () {
+                var prompt_eme = $(this).parent().next();
+                if(!$(this).val()){
+                    prompt_eme.css("color","red").text("Can NOT be null.");
+                }else {
+                    prompt_eme.css("color","green").text("This will be your username.");
+                }
+            });
+            //给密码框定义焦点推出函数
+            $("#password").focusout(function () {
+                var prompt_eme = $(this).parent().next();
+                if(!$(this).val()){
+                    prompt_eme.css("color","red").text("Can NOT be null.");
+                }else {
+                    prompt_eme.css("color","green").text("This will be your username. ");
+                }
+            });
+
+            //check邮件地址的合法性
+            $("#emailaddress").focusout(function () {
+                var checkEmail = /^\w{3,}@\w+(\.\w+)+$/;
+                if (!checkEmail.test($(this).val())) {
+                    $(this).parent().next().css("color", "red").text("Illegal mail address.");
+                }else{
+                    $(this).parent().next().css("color", "green").text("You will occasionally receive account related emails.");
+                }
+            });
+
+            //check电话号码的合法性
+            $("#phonenumber").focusout(function () {
+                var checkNumber = /^1[3|5|8]\d{9}$/;
+                if (!checkNumber.test($(this).val())) {
+                    $(this).parent().next().css("color", "red").text("Illegal phone number.");
+                }else{
+                    $(this).parent().next().css("color", "green").text("This will be your mobel number.");
+                }
+            });
+
+        })
+    </script>
+</body>
+</html>

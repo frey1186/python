@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link href="{% static "login.css" %}" rel="stylesheet" />
+</head>
+<body>
+    <div class="loginbody">
+
+        <div class="logo" >
+            <div>
+
+                <img src="{% static "logo.jpg" %}" alt="logo"/>
+            </div>
+        </div>
+        <div >
+            <div>
+                <h2>
+                    Sign in to BigHub
+                </h2>
+            </div>
+            <div class="prompt">
+                <!--Username or password can't be empty.-->
+                <!--Incorrect username or password. -->
+                {{ password_prompt }}
+            </div>
+            <form action="/loginhandle/" method="post">
+                <div class="label">
+                    <label for="username">Username</label>
+
+                </div>
+                <div class="input">
+                    <input id="username" type="text" name="username"/>
+                </div>
+
+                <div class="label">
+                    <label for="password">Password</label>
+
+                </div>
+                <div class="input">
+                    <input id="password" type="password" name="password"/>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Sign In" onclick="return CheckIt();"/>
+                </div>
+
+
+            </form>
+            <div class="link_to_createAccount">
+                <span>New to BigHub?</span>
+                <a href="/newaccount/">Create an account.</a>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="{%static "jQuery-1.12.3.js"%}"></script>
+    <script>
+        function CheckIt() {
+            //当username和password都有值的时候返回true，否则返回false
+            if($("#username").val() && $("#password").val()){
+                return true;
+            }else{
+                //显示用户名密码不能为空提示
+{#                $(".prompt").removeClass("hide")#}
+                $(".prompt")
+                        .text("Username or password can't be empty.");
+                $(".input input").css("border-color","red");
+                return false;
+            }
+        }
+        $(function () {
+            //获得焦点的输入框变化底色
+            $(".input input").focusout(function () {
+                $(this).css("background-color","#FFFFFF")
+            }).focusin(function () {
+                $(this).css("background-color","#FFFFCC")
+            });
+        })
+    </script>
+</body>
+</html>

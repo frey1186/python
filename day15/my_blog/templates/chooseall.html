@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+
+{% block right_title %}
+    <h1>全选反选</h1>
+
+
+{% endblock %}
+
+{% block right_content %}
+
+    <div>
+        <input type="button" value="全选" onclick="SelectAll();"/>
+        <input type="button" value="取消" onclick="ClearAll();"/>
+        <input type="button" value="反选" onclick="ReserveAll();"/>
+        <table border="1">
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>123123</td>
+                <td>123123</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>123123</td>
+                <td>123123</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>123123</td>
+                <td>123123</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                </td>
+                <td>123123</td>
+                <td>123123</td>
+            </tr>
+        </table>
+    </div>
+
+
+{% endblock %}
+
+{% block script %}
+    <script >
+
+        function SelectAll(){
+            $("table input[type=checkbox]").prop("checked",true);
+        }
+        function ClearAll(){
+            $("table input[type=checkbox]").prop("checked",false);
+        }
+        function ReserveAll(){
+
+            var selectedCheckbox = $("table :checked");
+            $("table input[type=checkbox]").prop("checked",true);
+            selectedCheckbox.prop("checked",false);
+
+            //循环匹配到的jQuery对象
+//            $("table :checkbox").each(function () {
+//                var isChecked = $(this).prop("checked");
+//                if(isChecked){
+//                    $(this).prop("checked",false);
+//                }else{
+//                    $(this).prop("checked",true);
+//                }
+//            })
+
+        }
+    </script>
+{% endblock %}
